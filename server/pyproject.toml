@@ -1,29 +1,35 @@
 [project]
-name = "edge-nn-offloading-mqtt"
+name = "sciot"
+description = "Split computing on IoT"
 dynamic = ["version"]  # This relies on git tags for versioning
 authors = [
-    { name = "Fabio Bove", email = "fabio.bove.dr@gmail.com" }
+    { name = "Fabio Bove", email = "fabio.bove.dr@gmail.com" },
+    { name = "Jun Wu Wang", email = "junwuwang@studenti.unimore.it" },
+    { name = "Luca Bedogni", email = "luca.bedogni@unimore.it" }
 ]
-description = "MQTT Neural Network Offloading Service"
 readme = "README.md"
 license = { file = "LICENSE" }
 keywords = ["flask-app", "esp32", "split-computing"]
 
-# Specify the required dependencies with correct versions
+requires-python = ">=3.11,<3.13"
 dependencies = [
+    "fastapi>=0.115.7",
+    "ntplib>=0.4.0",
+    "numpy",
+    "paho-mqtt>=2.1.0",
+    "pyyaml>=6.0.2",
+    "tensorflow",
+    "ruff>=0.9.3",
     "flask==3.0.3",
     "flask-smorest==0.44.0",
     "paho-mqtt==2.1.0",
-    "numpy>=1.0.0,<2.0.0",
     "pandas~=2.2.2",
     "tqdm~=4.66.4",
     "scipy~=1.14.0",
-    "tensorflow==2.15.0",
     "h5py==3.11.0",
-    "ntplib",
     "pillow",
-    "streamlit",
-    "streamlit_autorefresh",
+#    "streamlit",
+#    "streamlit_autorefresh",
 ]
 
 # Define optional dependencies like testing and CUDA support
@@ -35,9 +41,13 @@ test = [
     "pytest-md==0.2.0"
 ]
 
+[tool.setuptools]
+py-modules = []
+
+
 [project.urls]
-Homepage = "https://github.com/fabiobove-dr/flask-mqq-esp32-nn-offloading"
-Issues = "https://github.com/fabiobove-dr/flask-mqq-esp32-nn-offloading/issues/"
+Homepage = "https://github.com/UBICO/SCIoT"
+Issues = "https://github.com/UBICO/SCIoT/issues"
 
 # Setuptools git versioning configuration
 [tool.setuptools-git-versioning]
