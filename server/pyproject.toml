@@ -5,8 +5,9 @@ dynamic = ["version"]  # This relies on git tags for versioning
 authors = [
     { name = "Fabio Bove", email = "fabio.bove.dr@gmail.com" },
     { name = "Jun Wu Wang", email = "junwuwang@studenti.unimore.it" },
-    { name = "Luca Bedogni", email = "luca.bedogni@unimore.it" }
+    { name = "Luca Bedogni", email = "luca.bedogni@unimore.it"}
 ]
+description = "Neural Network Offloading Service"
 readme = "README.md"
 license = { file = "LICENSE" }
 keywords = ["flask-app", "esp32", "split-computing"]
