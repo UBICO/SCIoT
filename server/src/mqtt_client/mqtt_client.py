@@ -5,19 +5,19 @@ import time
 import ntplib
 import numpy as np
 import paho.mqtt.client as mqtt
-from src.edge.edge_initialization import Edge
-from src.device.device_initialization import Device
-from src.offloading_algo.offloading_algo import OffloadingAlgo
+from server.src.edge.edge_initialization import Edge
+from server.src.device.device_initialization import Device
+from server.src.offloading_algo.offloading_algo import OffloadingAlgo
 from PIL import Image
 import threading
 import queue
 
-from src.commons import OffloadingDataFiles
-from src.commons import InputData
-from src.commons import InputDataFiles
-from src.logger.log import logger
-from src.mqtt_client.mqtt_configs import MqttClientConfig, Topics, DefaultMessages
-from src.mqtt_client.mqtt_custom_message import MqttMessageData
+from server.src.commons import OffloadingDataFiles
+from server.src.commons import InputData
+from server.src.commons import InputDataFiles
+from server.src.logger.log import logger
+from server.src.mqtt_client.mqtt_configs import MqttClientConfig, Topics, DefaultMessages
+from server.src.mqtt_client.mqtt_custom_message import MqttMessageData
 
 
 class MqttClient:
@@ -67,7 +67,7 @@ class MqttClient:
         message = json.dumps({"id": random.randint(1, 1000)})
         return message
 
-    def publish(self, topic: str, message: str, qos: int = 2, max_retries: int = 3):
+    def publish(self, topic: str, message: str, qos: int = 2):
         """Publishes a message to a topic."""
         logger.debug(f"Publishing message to {topic}: {message}")
         try:

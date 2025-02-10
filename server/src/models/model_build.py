@@ -13,11 +13,14 @@ def init_folders(root_folder: str) -> None:
     os.makedirs(f"{root_folder}/layers/tflite/", exist_ok=True)
     os.makedirs(f"{root_folder}/layers/h/", exist_ok=True)
 
+
 def save_keras(name: str, model: Model, dir_path: str) -> None:
     model.save(f'{dir_path}/{name}.keras')
 
+
 def load_keras(name: str, dir_path: str) -> Model:
     return tf.keras.models.load_model(f'{dir_path}/{name}.keras')
+
 
 def build_resnet_from_scratch(img_height=10, img_width=10, num_classes=5) -> Model:
     # inputs = layers.Input(shape=(img_height, img_width, 3))
@@ -33,7 +36,6 @@ def build_resnet_from_scratch(img_height=10, img_width=10, num_classes=5) -> Mod
 
 
 if __name__ == "__main__":
-
     # initialize folders
     main_folder = "test/" + ModelManagerConfig.MODEL_DIR_PATH
     print(f"main_folder: {main_folder}")

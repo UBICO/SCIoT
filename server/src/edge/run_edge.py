@@ -1,8 +1,7 @@
-from src.logger.log import logger
-
-from src.edge.edge_initialization import Edge
-from src.mqtt_client.mqtt_client import MqttClient
-from src.mqtt_client.mqtt_configs import MqttClientConfig
+from server.src.edge.edge_initialization import Edge
+from server.src.logger.log import logger
+from server.src.mqtt_client.mqtt_client import MqttClient
+from server.src.mqtt_client.mqtt_configs import MqttClientConfig
 
 if __name__ == "__main__":
     logger.info("Starting the [EDGE] MQTT client")

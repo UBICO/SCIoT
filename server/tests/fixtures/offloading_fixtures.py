@@ -2,7 +2,7 @@ import json
 
 from pytest import fixture
 
-from tests.commons import TestSamples
+from server.tests.commons import TestSamples
 
 
 @fixture

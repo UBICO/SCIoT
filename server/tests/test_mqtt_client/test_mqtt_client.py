@@ -1,20 +1,26 @@
 import pytest
 
+from server.tests.commons import TestSamples
 
-def test_create_random_payload(mqtt_client_fixture):
+
+def test_create_random_payload(mqtt_client_fixture, monkeypatch):
     # Test the payload creation
     payload = mqtt_client_fixture.create_random_payload()
+
     assert "id" in payload
     assert isinstance(payload, str)
 
 
 def test_publish(mocker, mqtt_client_fixture):
-    # Mock the client's publish method
-    mock_client = mocker.patch('paho.mqtt.client.Client.publish')
+    # Mock the publish method on the actual instance
+    mock_publish = mocker.patch.object(mqtt_client_fixture.client, "publish")
+
+    # Call the publish method
     mqtt_client_fixture.publish("test/topic", "test message")
 
-    # Assert that publish was called with correct topic and message
-    mock_client.assert_called_once_with("test/topic", "test message")
+    # Assert publish was called with at least these arguments
+    mock_publish.assert_called_once_with("test/topic", "test message", qos=2, retain=False)
+
 
 
 def test_subscribe(mocker, mqtt_client_fixture):
@@ -38,12 +44,16 @@ def test_connect_to_broker(mocker, mqtt_client_fixture):
 
 
 def test_disconnect(mocker, mqtt_client_fixture):
-    # Mock the client's disconnect method
-    mock_client = mocker.patch('paho.mqtt.client.Client.disconnect')
+    """ Test that the MQTT client disconnects properly. """
+
+    # Mock the disconnect method of paho.mqtt.client.Client
+    mock_disconnect = mocker.patch.object(mqtt_client_fixture.client, "disconnect")
+
+    # Stop the MQTT client
     mqtt_client_fixture.stop()
 
-    # Assert that disconnect was called
-    mock_client.assert_called_once()
+    # Assert that disconnect was called once
+    mock_disconnect.assert_called_once()
 
 
 if __name__ == "__main__":

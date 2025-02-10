@@ -5,8 +5,8 @@ from dataclasses import dataclass
 import pandas as pd
 import struct
 
-from src.logger.log import logger
-from src.mqtt_client.mqtt_configs import Topics
+from server.src.logger.log import logger
+from server.src.mqtt_client.mqtt_configs import Topics
 
 
 @dataclass

@@ -23,6 +23,7 @@ def to_tflite(keras_model: Model, save: bool, save_dir: str, name: str) -> bytes
             f.write(tflite_model)
     return tflite_model
 
+
 def load_h5(name: str, dir_path: str) -> Model:
     return tf.keras.models.load_model(f'{dir_path}/{name}.h5')
 
@@ -51,7 +52,7 @@ def create_h5_submodels(save_dir: str, model: Model) -> dict:
         submodel = Model(inputs=input_tensor, outputs=output_tensor)
         submodels[layer.name] = submodel
         # save each submodel to a file
-        submodel.save(f'{save_dir}/submodel_{i-start_layer_index}.h5')
+        submodel.save(f'{save_dir}/submodel_{i - start_layer_index}.h5')
     return submodels
 
 
@@ -78,7 +79,7 @@ if __name__ == "__main__":
             # convert the model content to a C array format
             print(f"created [tflite] submodel for layer: {layer_index}")
             tflite_bytes = to_tflite(model, save=True, save_dir=f"{main_folder}/layers/tflite",
-                                    name=f"submodel_{layer_index}")
+                                     name=f"submodel_{layer_index}")
 
             # convert the model content to a C array format
             model_array = ", ".join([str(b) for b in tflite_bytes])
@@ -93,5 +94,6 @@ if __name__ == "__main__":
                 header_file.write('\n};\n')
 
             super_header_file.write('#include "layer_' + str(layer_index) + '.h"\n')
-            macro_definition += 'if(layer_name.equals("layer_' + str(layer_index) + '"))model = tflite::GetModel(layer_' + str(layer_index) + ');\\\n'
+            macro_definition += 'if(layer_name.equals("layer_' + str(
+                layer_index) + '"))model = tflite::GetModel(layer_' + str(layer_index) + ');\\\n'
         super_header_file.write(macro_definition)

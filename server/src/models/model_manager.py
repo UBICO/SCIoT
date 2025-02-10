@@ -4,9 +4,10 @@ from functools import wraps
 
 import tensorflow as tf
 
-from src.logger.log import logger
-from src.models.model_manager_config import ModelManagerConfig
-from src.commons import OffloadingDataFiles
+from server.src.commons import OffloadingDataFiles
+from server.src.logger.log import logger
+from server.src.models.model_manager_config import ModelManagerConfig
+
 
 def track_inference_time(func):
     """
@@ -24,8 +25,8 @@ def track_inference_time(func):
         # Calculate the elapsed time
         elapsed_time = time.perf_counter() - start_time
         # Store the elapsed time in the inference_times dictionary
-        self.inference_times[layer_id-layer_offset] = elapsed_time
-        logger.debug(f"Edge Inference for layer [{layer_id-layer_offset}] took {elapsed_time:.4f} seconds")
+        self.inference_times[layer_id - layer_offset] = elapsed_time
+        logger.debug(f"Edge Inference for layer [{layer_id - layer_offset}] took {elapsed_time:.4f} seconds")
         return result
 
     return wrapper
@@ -46,7 +47,8 @@ class ModelManager:
         inference_times: A dictionary to store the inference times for each layer.
     """
 
-    def __init__(self, save_path: str = ModelManagerConfig.SAVE_PATH, model_path: str = ModelManagerConfig.MODEL_PATH, inference_times: dict = {}):
+    def __init__(self, save_path: str = ModelManagerConfig.SAVE_PATH, model_path: str = ModelManagerConfig.MODEL_PATH,
+                 inference_times: dict = {}):
         self.save_path = save_path
         self.model_path = model_path
         self.num_layers = None
@@ -121,10 +123,11 @@ class ModelManager:
         Returns:
             The output of the layer.
         """
-        logger.debug(f"Making a prediction for layer [{layer_id-layer_offset}]")
+        logger.debug(f"Making a prediction for layer [{layer_id - layer_offset}]")
 
         # initialize interepreter with layer tflite model
-        interpreter = tf.lite.Interpreter(model_path=f'../models/test/test_model/layers/tflite/submodel_{layer_id-layer_offset}.tflite')
+        interpreter = tf.lite.Interpreter(
+            model_path=f'../models/test/test_model/layers/tflite/submodel_{layer_id - layer_offset}.tflite')
         interpreter.allocate_tensors()
         input_details = interpreter.get_input_details()
         output_details = interpreter.get_output_details()

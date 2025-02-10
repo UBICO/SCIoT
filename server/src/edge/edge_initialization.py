@@ -1,11 +1,11 @@
 import json
 
-import tensorflow as tf
 import numpy as np
+import tensorflow as tf
 
-from src.commons import OffloadingDataFiles
-from src.commons import InputData
-from src.models.model_manager import ModelManager
+from server.src.commons import InputData
+from server.src.commons import OffloadingDataFiles
+from server.src.models.model_manager import ModelManager
 
 
 class Edge:
@@ -32,8 +32,9 @@ class Edge:
         num_of_layers = len(model_manager.model.layers)
 
         # adjust model start layer index (offset is applied if the first layer is an InputLayer)
-        start_layer_offset = 1 if isinstance(model_manager.model.layers[first_layer_index], tf.keras.layers.InputLayer) else 0
-        start_layer_index = start_layer_index+start_layer_offset
+        start_layer_offset = 1 if isinstance(model_manager.model.layers[first_layer_index],
+                                             tf.keras.layers.InputLayer) else 0
+        start_layer_index = start_layer_index + start_layer_offset
 
         # set the layers to use
         layers_to_use = model_manager.model.layers[start_layer_index:num_of_layers]
@@ -47,7 +48,7 @@ class Edge:
 
         for layer_index, layer in enumerate(layers_to_use, start=start_layer_index):
             prediction_data = []
-            if layer_index == start_layer_index:   # if it's the starting layer
+            if layer_index == start_layer_index:  # if it's the starting layer
                 prediction_data.append(input_data)
             else:
                 # Get the previous layers' output tensor
@@ -64,13 +65,13 @@ class Edge:
         # save the inference times to a file
         model_manager.save_inference_times()
 
-        return predictions[layers_to_use[num_of_layers-start_layer_index-1]]
+        return predictions[layers_to_use[num_of_layers - start_layer_index - 1]]
 
     @staticmethod
     def initialization():
         # original array
         image_array = InputData().image_array
-        image_array = image_array / 255.0 # Normalize pixel values
+        image_array = image_array / 255.0  # Normalize pixel values
 
         # check the shape and dtype
         print(image_array.shape)
@@ -81,7 +82,7 @@ class Edge:
         model_manager.load_model()
 
         # set the layers to use
-        predictions = {} 
+        predictions = {}
         layer_sizes = {}
         first_layer_index = 0
         start_layer_index = first_layer_index
@@ -90,8 +91,9 @@ class Edge:
         end_layer_index = len(model_manager.model.layers)
 
         # adjust model start layer index (offset is applied if the first layer is an InputLayer)
-        start_layer_offset = 1 if isinstance(model_manager.model.layers[first_layer_index], tf.keras.layers.InputLayer) else 0
-        start_layer_index = start_layer_index+start_layer_offset
+        start_layer_offset = 1 if isinstance(model_manager.model.layers[first_layer_index],
+                                             tf.keras.layers.InputLayer) else 0
+        start_layer_index = start_layer_index + start_layer_offset
 
         # set the layers to use
         layers_to_use = model_manager.model.layers[start_layer_index:end_layer_index]
@@ -101,7 +103,7 @@ class Edge:
 
         for layer_index, layer in enumerate(layers_to_use, start=start_layer_index):
             prediction_data = []
-            if layer_index == start_layer_index:   # if it's the first layer
+            if layer_index == start_layer_index:  # if it's the first layer
                 prediction_data.append(input_data)
             else:
                 # Get the previous layers' output tensor
@@ -113,7 +115,8 @@ class Edge:
                     prediction_data.append(predictions[inbound_node.inbound_layers])
 
             prediction = model_manager.predict_single_layer(layer_index, start_layer_offset, prediction_data)
-            layer_sizes[layer_index-start_layer_offset] = float(model_manager.get_layer_size_in_bytes(layer, prediction))
+            layer_sizes[layer_index - start_layer_offset] = float(
+                model_manager.get_layer_size_in_bytes(layer, prediction))
             predictions[layer] = prediction
 
         # save the inference times to a file

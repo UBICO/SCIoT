@@ -1,7 +1,7 @@
 import pytest
 from pytest import mark
 
-from src.offloading_algo.offloading_algo import OffloadingAlgo
+from server.src.offloading_algo.offloading_algo import OffloadingAlgo
 
 
 @mark.parametrize(
