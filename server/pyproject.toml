@@ -13,6 +13,8 @@ license = { file = "LICENSE" }
 keywords = ["flask-app", "esp32", "split-computing"]
 
 requires-python = ">=3.11,<3.12"
+
+# Specify the required dependencies with correct versions
 dependencies = [
     "fastapi>=0.115.7",
     "ntplib>=0.4.0",
@@ -32,9 +34,9 @@ dependencies = [
     "uvicorn",
     "streamlit",
     "streamlit_autorefresh",
+    "ntplib>=0.4.0",
 ]
 
-# Define optional dependencies like testing and CUDA support
 [project.optional-dependencies]
 test = [
     "pytest==7.2.1",
