@@ -1,0 +1,1064 @@
+2025-01-30 07:32:29,917 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: 0.010059595108032227 seconds
+2025-01-30 07:32:30,039 - INFO     - offloading_algo.py:static_offloading:109 - Performing Static Offloading:
+2025-01-30 07:32:30,039 - INFO     - offloading_algo.py:static_offloading:110 - Total Neural Network Layers: 4
+2025-01-30 07:32:30,039 - INFO     - offloading_algo.py:edge_only_computation_evaluation:47 - Performing Edge Only Offloading:
+2025-01-30 07:32:30,040 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:32:30,040 - INFO     - offloading_algo.py:evaluation:32         - DS:           0
+2025-01-30 07:32:30,040 - INFO     - offloading_algo.py:evaluation:33         - IC:           0
+2025-01-30 07:32:30,040 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.688352
+2025-01-30 07:32:30,040 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0
+2025-01-30 07:32:30,040 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:32:30,040 - INFO     - offloading_algo.py:mixed_computation_evaluation:65 - Performing Partial Offloading:
+2025-01-30 07:32:30,040 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:32:30,040 - INFO     - offloading_algo.py:evaluation:32         - DS:           44288.0
+2025-01-30 07:32:30,040 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.164285
+2025-01-30 07:32:30,040 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.5240670000000001
+2025-01-30 07:32:30,040 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:32:30,040 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.6883520000000001
+2025-01-30 07:32:30,040 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:32:30,040 - INFO     - offloading_algo.py:evaluation:32         - DS:           7424.0
+2025-01-30 07:32:30,040 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.338912
+2025-01-30 07:32:30,041 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.34944
+2025-01-30 07:32:30,041 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:32:30,041 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:32:30,041 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:32:30,041 - INFO     - offloading_algo.py:evaluation:32         - DS:           4400.0
+2025-01-30 07:32:30,041 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.512431
+2025-01-30 07:32:30,041 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.175921
+2025-01-30 07:32:30,041 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:32:30,041 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:32:30,041 - INFO     - offloading_algo.py:device_only_evaluation:87 - Performing Device Only Offloading:
+2025-01-30 07:32:30,041 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:32:30,041 - INFO     - offloading_algo.py:evaluation:32         - DS:           2304.0
+2025-01-30 07:32:30,041 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.688352
+2025-01-30 07:32:30,041 - INFO     - offloading_algo.py:evaluation:34         - CE:           0
+2025-01-30 07:32:30,041 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:32:30,041 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:32:30,041 - INFO     - offloading_algo.py:static_offloading:116 - Computation Completed - Offloading Summary:
+2025-01-30 07:32:30,042 - INFO     - offloading_algo.py:static_offloading:117 - Lowest Evaluation: 0.688352
+2025-01-30 07:32:30,042 - INFO     - offloading_algo.py:static_offloading:118 - Best Offloading Layer: 1
+2025-01-30 07:32:30,042 - INFO     - offloading_algo.py:static_offloading:119 - Ended Offloading Process
+2025-01-30 07:32:30,043 - INFO     - offloading_algo.py:static_offloading:109 - Performing Static Offloading:
+2025-01-30 07:32:30,043 - INFO     - offloading_algo.py:static_offloading:110 - Total Neural Network Layers: 4
+2025-01-30 07:32:30,043 - INFO     - offloading_algo.py:edge_only_computation_evaluation:47 - Performing Edge Only Offloading:
+2025-01-30 07:32:30,043 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:32:30,043 - INFO     - offloading_algo.py:evaluation:32         - DS:           0
+2025-01-30 07:32:30,043 - INFO     - offloading_algo.py:evaluation:33         - IC:           0
+2025-01-30 07:32:30,043 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.688352
+2025-01-30 07:32:30,043 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0
+2025-01-30 07:32:30,043 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:32:30,043 - INFO     - offloading_algo.py:mixed_computation_evaluation:65 - Performing Partial Offloading:
+2025-01-30 07:32:30,044 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:32:30,044 - INFO     - offloading_algo.py:evaluation:32         - DS:           44288.0
+2025-01-30 07:32:30,044 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.164285
+2025-01-30 07:32:30,044 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.5240670000000001
+2025-01-30 07:32:30,044 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:32:30,044 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  44288.688352
+2025-01-30 07:32:30,044 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:32:30,044 - INFO     - offloading_algo.py:evaluation:32         - DS:           7424.0
+2025-01-30 07:32:30,044 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.338912
+2025-01-30 07:32:30,044 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.34944
+2025-01-30 07:32:30,044 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:32:30,044 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  7424.688352
+2025-01-30 07:32:30,044 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:32:30,044 - INFO     - offloading_algo.py:evaluation:32         - DS:           4400.0
+2025-01-30 07:32:30,044 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.512431
+2025-01-30 07:32:30,044 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.175921
+2025-01-30 07:32:30,044 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:32:30,044 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  4400.688352
+2025-01-30 07:32:30,045 - INFO     - offloading_algo.py:device_only_evaluation:87 - Performing Device Only Offloading:
+2025-01-30 07:32:30,045 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:32:30,045 - INFO     - offloading_algo.py:evaluation:32         - DS:           2304.0
+2025-01-30 07:32:30,045 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.688352
+2025-01-30 07:32:30,045 - INFO     - offloading_algo.py:evaluation:34         - CE:           0
+2025-01-30 07:32:30,045 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:32:30,045 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  2304.688352
+2025-01-30 07:32:30,045 - INFO     - offloading_algo.py:static_offloading:116 - Computation Completed - Offloading Summary:
+2025-01-30 07:32:30,045 - INFO     - offloading_algo.py:static_offloading:117 - Lowest Evaluation: 2304.688352
+2025-01-30 07:32:30,045 - INFO     - offloading_algo.py:static_offloading:118 - Best Offloading Layer: 3
+2025-01-30 07:32:30,045 - INFO     - offloading_algo.py:static_offloading:119 - Ended Offloading Process
+2025-01-30 07:32:57,460 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: 0.008628368377685547 seconds
+2025-01-30 07:32:57,589 - INFO     - offloading_algo.py:static_offloading:109 - Performing Static Offloading:
+2025-01-30 07:32:57,589 - INFO     - offloading_algo.py:static_offloading:110 - Total Neural Network Layers: 4
+2025-01-30 07:32:57,589 - INFO     - offloading_algo.py:edge_only_computation_evaluation:47 - Performing Edge Only Offloading:
+2025-01-30 07:32:57,589 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:32:57,589 - INFO     - offloading_algo.py:evaluation:32         - DS:           0
+2025-01-30 07:32:57,589 - INFO     - offloading_algo.py:evaluation:33         - IC:           0
+2025-01-30 07:32:57,589 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.688352
+2025-01-30 07:32:57,590 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0
+2025-01-30 07:32:57,590 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:32:57,590 - INFO     - offloading_algo.py:mixed_computation_evaluation:65 - Performing Partial Offloading:
+2025-01-30 07:32:57,590 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:32:57,590 - INFO     - offloading_algo.py:evaluation:32         - DS:           44288.0
+2025-01-30 07:32:57,590 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.164285
+2025-01-30 07:32:57,590 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.5240670000000001
+2025-01-30 07:32:57,590 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:32:57,590 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.6883520000000001
+2025-01-30 07:32:57,590 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:32:57,590 - INFO     - offloading_algo.py:evaluation:32         - DS:           7424.0
+2025-01-30 07:32:57,590 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.338912
+2025-01-30 07:32:57,590 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.34944
+2025-01-30 07:32:57,590 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:32:57,590 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:32:57,590 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:32:57,591 - INFO     - offloading_algo.py:evaluation:32         - DS:           4400.0
+2025-01-30 07:32:57,591 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.512431
+2025-01-30 07:32:57,591 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.175921
+2025-01-30 07:32:57,591 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:32:57,591 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:32:57,591 - INFO     - offloading_algo.py:device_only_evaluation:87 - Performing Device Only Offloading:
+2025-01-30 07:32:57,591 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:32:57,591 - INFO     - offloading_algo.py:evaluation:32         - DS:           2304.0
+2025-01-30 07:32:57,591 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.688352
+2025-01-30 07:32:57,591 - INFO     - offloading_algo.py:evaluation:34         - CE:           0
+2025-01-30 07:32:57,591 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:32:57,591 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:32:57,591 - INFO     - offloading_algo.py:static_offloading:116 - Computation Completed - Offloading Summary:
+2025-01-30 07:32:57,591 - INFO     - offloading_algo.py:static_offloading:117 - Lowest Evaluation: 0.688352
+2025-01-30 07:32:57,591 - INFO     - offloading_algo.py:static_offloading:118 - Best Offloading Layer: 1
+2025-01-30 07:32:57,591 - INFO     - offloading_algo.py:static_offloading:119 - Ended Offloading Process
+2025-01-30 07:32:57,593 - INFO     - offloading_algo.py:static_offloading:109 - Performing Static Offloading:
+2025-01-30 07:32:57,593 - INFO     - offloading_algo.py:static_offloading:110 - Total Neural Network Layers: 4
+2025-01-30 07:32:57,593 - INFO     - offloading_algo.py:edge_only_computation_evaluation:47 - Performing Edge Only Offloading:
+2025-01-30 07:32:57,593 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:32:57,593 - INFO     - offloading_algo.py:evaluation:32         - DS:           0
+2025-01-30 07:32:57,593 - INFO     - offloading_algo.py:evaluation:33         - IC:           0
+2025-01-30 07:32:57,593 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.688352
+2025-01-30 07:32:57,593 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0
+2025-01-30 07:32:57,593 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:32:57,593 - INFO     - offloading_algo.py:mixed_computation_evaluation:65 - Performing Partial Offloading:
+2025-01-30 07:32:57,593 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:32:57,593 - INFO     - offloading_algo.py:evaluation:32         - DS:           44288.0
+2025-01-30 07:32:57,593 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.164285
+2025-01-30 07:32:57,593 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.5240670000000001
+2025-01-30 07:32:57,594 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:32:57,594 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  44288.688352
+2025-01-30 07:32:57,594 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:32:57,594 - INFO     - offloading_algo.py:evaluation:32         - DS:           7424.0
+2025-01-30 07:32:57,594 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.338912
+2025-01-30 07:32:57,594 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.34944
+2025-01-30 07:32:57,594 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:32:57,594 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  7424.688352
+2025-01-30 07:32:57,594 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:32:57,594 - INFO     - offloading_algo.py:evaluation:32         - DS:           4400.0
+2025-01-30 07:32:57,594 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.512431
+2025-01-30 07:32:57,594 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.175921
+2025-01-30 07:32:57,594 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:32:57,594 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  4400.688352
+2025-01-30 07:32:57,594 - INFO     - offloading_algo.py:device_only_evaluation:87 - Performing Device Only Offloading:
+2025-01-30 07:32:57,594 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:32:57,595 - INFO     - offloading_algo.py:evaluation:32         - DS:           2304.0
+2025-01-30 07:32:57,595 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.688352
+2025-01-30 07:32:57,595 - INFO     - offloading_algo.py:evaluation:34         - CE:           0
+2025-01-30 07:32:57,595 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:32:57,595 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  2304.688352
+2025-01-30 07:32:57,595 - INFO     - offloading_algo.py:static_offloading:116 - Computation Completed - Offloading Summary:
+2025-01-30 07:32:57,595 - INFO     - offloading_algo.py:static_offloading:117 - Lowest Evaluation: 2304.688352
+2025-01-30 07:32:57,595 - INFO     - offloading_algo.py:static_offloading:118 - Best Offloading Layer: 3
+2025-01-30 07:32:57,595 - INFO     - offloading_algo.py:static_offloading:119 - Ended Offloading Process
+2025-01-30 07:34:12,514 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: 0.011148214340209961 seconds
+2025-01-30 07:34:12,639 - INFO     - offloading_algo.py:static_offloading:109 - Performing Static Offloading:
+2025-01-30 07:34:12,640 - INFO     - offloading_algo.py:static_offloading:110 - Total Neural Network Layers: 4
+2025-01-30 07:34:12,640 - INFO     - offloading_algo.py:edge_only_computation_evaluation:47 - Performing Edge Only Offloading:
+2025-01-30 07:34:12,640 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:34:12,640 - INFO     - offloading_algo.py:evaluation:32         - DS:           0
+2025-01-30 07:34:12,640 - INFO     - offloading_algo.py:evaluation:33         - IC:           0
+2025-01-30 07:34:12,640 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.688352
+2025-01-30 07:34:12,640 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0
+2025-01-30 07:34:12,640 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:34:12,640 - INFO     - offloading_algo.py:mixed_computation_evaluation:65 - Performing Partial Offloading:
+2025-01-30 07:34:12,640 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:34:12,640 - INFO     - offloading_algo.py:evaluation:32         - DS:           44288.0
+2025-01-30 07:34:12,640 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.164285
+2025-01-30 07:34:12,641 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.5240670000000001
+2025-01-30 07:34:12,641 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:34:12,641 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.6883520000000001
+2025-01-30 07:34:12,641 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:34:12,641 - INFO     - offloading_algo.py:evaluation:32         - DS:           7424.0
+2025-01-30 07:34:12,641 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.338912
+2025-01-30 07:34:12,641 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.34944
+2025-01-30 07:34:12,641 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:34:12,641 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:34:12,641 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:34:12,641 - INFO     - offloading_algo.py:evaluation:32         - DS:           4400.0
+2025-01-30 07:34:12,641 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.512431
+2025-01-30 07:34:12,641 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.175921
+2025-01-30 07:34:12,641 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:34:12,641 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:34:12,641 - INFO     - offloading_algo.py:device_only_evaluation:87 - Performing Device Only Offloading:
+2025-01-30 07:34:12,641 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:34:12,642 - INFO     - offloading_algo.py:evaluation:32         - DS:           2304.0
+2025-01-30 07:34:12,642 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.688352
+2025-01-30 07:34:12,642 - INFO     - offloading_algo.py:evaluation:34         - CE:           0
+2025-01-30 07:34:12,642 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:34:12,642 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:34:12,642 - INFO     - offloading_algo.py:static_offloading:116 - Computation Completed - Offloading Summary:
+2025-01-30 07:34:12,642 - INFO     - offloading_algo.py:static_offloading:117 - Lowest Evaluation: 0.688352
+2025-01-30 07:34:12,642 - INFO     - offloading_algo.py:static_offloading:118 - Best Offloading Layer: 1
+2025-01-30 07:34:12,642 - INFO     - offloading_algo.py:static_offloading:119 - Ended Offloading Process
+2025-01-30 07:34:12,643 - INFO     - offloading_algo.py:static_offloading:109 - Performing Static Offloading:
+2025-01-30 07:34:12,643 - INFO     - offloading_algo.py:static_offloading:110 - Total Neural Network Layers: 4
+2025-01-30 07:34:12,643 - INFO     - offloading_algo.py:edge_only_computation_evaluation:47 - Performing Edge Only Offloading:
+2025-01-30 07:34:12,643 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:34:12,644 - INFO     - offloading_algo.py:evaluation:32         - DS:           0
+2025-01-30 07:34:12,644 - INFO     - offloading_algo.py:evaluation:33         - IC:           0
+2025-01-30 07:34:12,644 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.688352
+2025-01-30 07:34:12,644 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0
+2025-01-30 07:34:12,644 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:34:12,644 - INFO     - offloading_algo.py:mixed_computation_evaluation:65 - Performing Partial Offloading:
+2025-01-30 07:34:12,644 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:34:12,644 - INFO     - offloading_algo.py:evaluation:32         - DS:           44288.0
+2025-01-30 07:34:12,644 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.164285
+2025-01-30 07:34:12,644 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.5240670000000001
+2025-01-30 07:34:12,644 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:34:12,644 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  44288.688352
+2025-01-30 07:34:12,644 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:34:12,644 - INFO     - offloading_algo.py:evaluation:32         - DS:           7424.0
+2025-01-30 07:34:12,644 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.338912
+2025-01-30 07:34:12,644 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.34944
+2025-01-30 07:34:12,644 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:34:12,645 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  7424.688352
+2025-01-30 07:34:12,645 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:34:12,645 - INFO     - offloading_algo.py:evaluation:32         - DS:           4400.0
+2025-01-30 07:34:12,645 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.512431
+2025-01-30 07:34:12,645 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.175921
+2025-01-30 07:34:12,645 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:34:12,645 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  4400.688352
+2025-01-30 07:34:12,645 - INFO     - offloading_algo.py:device_only_evaluation:87 - Performing Device Only Offloading:
+2025-01-30 07:34:12,645 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:34:12,645 - INFO     - offloading_algo.py:evaluation:32         - DS:           2304.0
+2025-01-30 07:34:12,645 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.688352
+2025-01-30 07:34:12,645 - INFO     - offloading_algo.py:evaluation:34         - CE:           0
+2025-01-30 07:34:12,645 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:34:12,645 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  2304.688352
+2025-01-30 07:34:12,645 - INFO     - offloading_algo.py:static_offloading:116 - Computation Completed - Offloading Summary:
+2025-01-30 07:34:12,645 - INFO     - offloading_algo.py:static_offloading:117 - Lowest Evaluation: 2304.688352
+2025-01-30 07:34:12,645 - INFO     - offloading_algo.py:static_offloading:118 - Best Offloading Layer: 3
+2025-01-30 07:34:12,645 - INFO     - offloading_algo.py:static_offloading:119 - Ended Offloading Process
+2025-01-30 07:34:34,245 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: 0.012291669845581055 seconds
+2025-01-30 07:34:34,372 - INFO     - offloading_algo.py:static_offloading:109 - Performing Static Offloading:
+2025-01-30 07:34:34,372 - INFO     - offloading_algo.py:static_offloading:110 - Total Neural Network Layers: 4
+2025-01-30 07:34:34,372 - INFO     - offloading_algo.py:edge_only_computation_evaluation:47 - Performing Edge Only Offloading:
+2025-01-30 07:34:34,372 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:34:34,372 - INFO     - offloading_algo.py:evaluation:32         - DS:           0
+2025-01-30 07:34:34,372 - INFO     - offloading_algo.py:evaluation:33         - IC:           0
+2025-01-30 07:34:34,373 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.688352
+2025-01-30 07:34:34,373 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0
+2025-01-30 07:34:34,373 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:34:34,373 - INFO     - offloading_algo.py:mixed_computation_evaluation:65 - Performing Partial Offloading:
+2025-01-30 07:34:34,373 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:34:34,373 - INFO     - offloading_algo.py:evaluation:32         - DS:           44288.0
+2025-01-30 07:34:34,373 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.164285
+2025-01-30 07:34:34,373 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.5240670000000001
+2025-01-30 07:34:34,373 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:34:34,373 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.6883520000000001
+2025-01-30 07:34:34,373 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:34:34,373 - INFO     - offloading_algo.py:evaluation:32         - DS:           7424.0
+2025-01-30 07:34:34,373 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.338912
+2025-01-30 07:34:34,373 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.34944
+2025-01-30 07:34:34,373 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:34:34,374 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:34:34,374 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:34:34,374 - INFO     - offloading_algo.py:evaluation:32         - DS:           4400.0
+2025-01-30 07:34:34,374 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.512431
+2025-01-30 07:34:34,374 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.175921
+2025-01-30 07:34:34,374 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:34:34,374 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:34:34,374 - INFO     - offloading_algo.py:device_only_evaluation:87 - Performing Device Only Offloading:
+2025-01-30 07:34:34,374 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:34:34,374 - INFO     - offloading_algo.py:evaluation:32         - DS:           2304.0
+2025-01-30 07:34:34,374 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.688352
+2025-01-30 07:34:34,374 - INFO     - offloading_algo.py:evaluation:34         - CE:           0
+2025-01-30 07:34:34,374 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:34:34,374 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:34:34,374 - INFO     - offloading_algo.py:static_offloading:116 - Computation Completed - Offloading Summary:
+2025-01-30 07:34:34,374 - INFO     - offloading_algo.py:static_offloading:117 - Lowest Evaluation: 0.688352
+2025-01-30 07:34:34,375 - INFO     - offloading_algo.py:static_offloading:118 - Best Offloading Layer: 1
+2025-01-30 07:34:34,375 - INFO     - offloading_algo.py:static_offloading:119 - Ended Offloading Process
+2025-01-30 07:34:34,376 - INFO     - offloading_algo.py:static_offloading:109 - Performing Static Offloading:
+2025-01-30 07:34:34,376 - INFO     - offloading_algo.py:static_offloading:110 - Total Neural Network Layers: 4
+2025-01-30 07:34:34,376 - INFO     - offloading_algo.py:edge_only_computation_evaluation:47 - Performing Edge Only Offloading:
+2025-01-30 07:34:34,376 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:34:34,376 - INFO     - offloading_algo.py:evaluation:32         - DS:           0
+2025-01-30 07:34:34,376 - INFO     - offloading_algo.py:evaluation:33         - IC:           0
+2025-01-30 07:34:34,376 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.688352
+2025-01-30 07:34:34,376 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0
+2025-01-30 07:34:34,376 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:34:34,376 - INFO     - offloading_algo.py:mixed_computation_evaluation:65 - Performing Partial Offloading:
+2025-01-30 07:34:34,376 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:34:34,376 - INFO     - offloading_algo.py:evaluation:32         - DS:           44288.0
+2025-01-30 07:34:34,377 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.164285
+2025-01-30 07:34:34,377 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.5240670000000001
+2025-01-30 07:34:34,377 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:34:34,377 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  44288.688352
+2025-01-30 07:34:34,377 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:34:34,377 - INFO     - offloading_algo.py:evaluation:32         - DS:           7424.0
+2025-01-30 07:34:34,377 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.338912
+2025-01-30 07:34:34,377 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.34944
+2025-01-30 07:34:34,377 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:34:34,377 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  7424.688352
+2025-01-30 07:34:34,377 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:34:34,377 - INFO     - offloading_algo.py:evaluation:32         - DS:           4400.0
+2025-01-30 07:34:34,377 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.512431
+2025-01-30 07:34:34,377 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.175921
+2025-01-30 07:34:34,377 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:34:34,377 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  4400.688352
+2025-01-30 07:34:34,378 - INFO     - offloading_algo.py:device_only_evaluation:87 - Performing Device Only Offloading:
+2025-01-30 07:34:34,378 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:34:34,378 - INFO     - offloading_algo.py:evaluation:32         - DS:           2304.0
+2025-01-30 07:34:34,378 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.688352
+2025-01-30 07:34:34,378 - INFO     - offloading_algo.py:evaluation:34         - CE:           0
+2025-01-30 07:34:34,378 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:34:34,378 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  2304.688352
+2025-01-30 07:34:34,378 - INFO     - offloading_algo.py:static_offloading:116 - Computation Completed - Offloading Summary:
+2025-01-30 07:34:34,378 - INFO     - offloading_algo.py:static_offloading:117 - Lowest Evaluation: 2304.688352
+2025-01-30 07:34:34,378 - INFO     - offloading_algo.py:static_offloading:118 - Best Offloading Layer: 3
+2025-01-30 07:34:34,378 - INFO     - offloading_algo.py:static_offloading:119 - Ended Offloading Process
+2025-01-30 07:35:36,090 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: 0.007097482681274414 seconds
+2025-01-30 07:35:36,233 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: 0.00707697868347168 seconds
+2025-01-30 07:35:36,270 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: 0.009154558181762695 seconds
+2025-01-30 07:35:36,293 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: 0.007077932357788086 seconds
+2025-01-30 07:35:36,337 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: 0.01796269416809082 seconds
+2025-01-30 07:35:36,344 - INFO     - offloading_algo.py:static_offloading:109 - Performing Static Offloading:
+2025-01-30 07:35:36,344 - INFO     - offloading_algo.py:static_offloading:110 - Total Neural Network Layers: 4
+2025-01-30 07:35:36,344 - INFO     - offloading_algo.py:edge_only_computation_evaluation:47 - Performing Edge Only Offloading:
+2025-01-30 07:35:36,344 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:35:36,344 - INFO     - offloading_algo.py:evaluation:32         - DS:           0
+2025-01-30 07:35:36,344 - INFO     - offloading_algo.py:evaluation:33         - IC:           0
+2025-01-30 07:35:36,344 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.688352
+2025-01-30 07:35:36,345 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0
+2025-01-30 07:35:36,345 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:35:36,345 - INFO     - offloading_algo.py:mixed_computation_evaluation:65 - Performing Partial Offloading:
+2025-01-30 07:35:36,345 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:35:36,345 - INFO     - offloading_algo.py:evaluation:32         - DS:           44288.0
+2025-01-30 07:35:36,345 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.164285
+2025-01-30 07:35:36,345 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.5240670000000001
+2025-01-30 07:35:36,345 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:35:36,345 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.6883520000000001
+2025-01-30 07:35:36,345 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:35:36,345 - INFO     - offloading_algo.py:evaluation:32         - DS:           7424.0
+2025-01-30 07:35:36,345 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.338912
+2025-01-30 07:35:36,345 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.34944
+2025-01-30 07:35:36,345 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:35:36,345 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:35:36,345 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:35:36,345 - INFO     - offloading_algo.py:evaluation:32         - DS:           4400.0
+2025-01-30 07:35:36,346 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.512431
+2025-01-30 07:35:36,346 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.175921
+2025-01-30 07:35:36,346 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:35:36,346 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:35:36,346 - INFO     - offloading_algo.py:device_only_evaluation:87 - Performing Device Only Offloading:
+2025-01-30 07:35:36,346 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:35:36,346 - INFO     - offloading_algo.py:evaluation:32         - DS:           2304.0
+2025-01-30 07:35:36,346 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.688352
+2025-01-30 07:35:36,346 - INFO     - offloading_algo.py:evaluation:34         - CE:           0
+2025-01-30 07:35:36,346 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:35:36,346 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:35:36,346 - INFO     - offloading_algo.py:static_offloading:116 - Computation Completed - Offloading Summary:
+2025-01-30 07:35:36,346 - INFO     - offloading_algo.py:static_offloading:117 - Lowest Evaluation: 0.688352
+2025-01-30 07:35:36,346 - INFO     - offloading_algo.py:static_offloading:118 - Best Offloading Layer: 1
+2025-01-30 07:35:36,346 - INFO     - offloading_algo.py:static_offloading:119 - Ended Offloading Process
+2025-01-30 07:35:36,347 - INFO     - offloading_algo.py:static_offloading:109 - Performing Static Offloading:
+2025-01-30 07:35:36,348 - INFO     - offloading_algo.py:static_offloading:110 - Total Neural Network Layers: 4
+2025-01-30 07:35:36,348 - INFO     - offloading_algo.py:edge_only_computation_evaluation:47 - Performing Edge Only Offloading:
+2025-01-30 07:35:36,348 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:35:36,348 - INFO     - offloading_algo.py:evaluation:32         - DS:           0
+2025-01-30 07:35:36,348 - INFO     - offloading_algo.py:evaluation:33         - IC:           0
+2025-01-30 07:35:36,348 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.688352
+2025-01-30 07:35:36,348 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0
+2025-01-30 07:35:36,348 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:35:36,348 - INFO     - offloading_algo.py:mixed_computation_evaluation:65 - Performing Partial Offloading:
+2025-01-30 07:35:36,348 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:35:36,348 - INFO     - offloading_algo.py:evaluation:32         - DS:           44288.0
+2025-01-30 07:35:36,348 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.164285
+2025-01-30 07:35:36,348 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.5240670000000001
+2025-01-30 07:35:36,348 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:35:36,348 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  44288.688352
+2025-01-30 07:35:36,349 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:35:36,349 - INFO     - offloading_algo.py:evaluation:32         - DS:           7424.0
+2025-01-30 07:35:36,349 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.338912
+2025-01-30 07:35:36,349 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.34944
+2025-01-30 07:35:36,349 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:35:36,349 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  7424.688352
+2025-01-30 07:35:36,349 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:35:36,349 - INFO     - offloading_algo.py:evaluation:32         - DS:           4400.0
+2025-01-30 07:35:36,349 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.512431
+2025-01-30 07:35:36,349 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.175921
+2025-01-30 07:35:36,349 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:35:36,349 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  4400.688352
+2025-01-30 07:35:36,349 - INFO     - offloading_algo.py:device_only_evaluation:87 - Performing Device Only Offloading:
+2025-01-30 07:35:36,349 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:35:36,349 - INFO     - offloading_algo.py:evaluation:32         - DS:           2304.0
+2025-01-30 07:35:36,349 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.688352
+2025-01-30 07:35:36,350 - INFO     - offloading_algo.py:evaluation:34         - CE:           0
+2025-01-30 07:35:36,350 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:35:36,350 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  2304.688352
+2025-01-30 07:35:36,350 - INFO     - offloading_algo.py:static_offloading:116 - Computation Completed - Offloading Summary:
+2025-01-30 07:35:36,350 - INFO     - offloading_algo.py:static_offloading:117 - Lowest Evaluation: 2304.688352
+2025-01-30 07:35:36,350 - INFO     - offloading_algo.py:static_offloading:118 - Best Offloading Layer: 3
+2025-01-30 07:35:36,350 - INFO     - offloading_algo.py:static_offloading:119 - Ended Offloading Process
+2025-01-30 07:35:52,269 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: 0.015917062759399414 seconds
+2025-01-30 07:36:04,926 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: 0.0183868408203125 seconds
+2025-01-30 07:36:05,088 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: 0.004496335983276367 seconds
+2025-01-30 07:36:05,131 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: -0.013926267623901367 seconds
+2025-01-30 07:36:17,202 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: 0.005628347396850586 seconds
+2025-01-30 07:36:17,249 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: 0.005270242691040039 seconds
+2025-01-30 07:36:17,256 - INFO     - offloading_algo.py:static_offloading:109 - Performing Static Offloading:
+2025-01-30 07:36:17,256 - INFO     - offloading_algo.py:static_offloading:110 - Total Neural Network Layers: 4
+2025-01-30 07:36:17,257 - INFO     - offloading_algo.py:edge_only_computation_evaluation:47 - Performing Edge Only Offloading:
+2025-01-30 07:36:17,257 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:36:17,257 - INFO     - offloading_algo.py:evaluation:32         - DS:           0
+2025-01-30 07:36:17,257 - INFO     - offloading_algo.py:evaluation:33         - IC:           0
+2025-01-30 07:36:17,257 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.688352
+2025-01-30 07:36:17,257 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0
+2025-01-30 07:36:17,257 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:36:17,257 - INFO     - offloading_algo.py:mixed_computation_evaluation:65 - Performing Partial Offloading:
+2025-01-30 07:36:17,257 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:36:17,257 - INFO     - offloading_algo.py:evaluation:32         - DS:           44288.0
+2025-01-30 07:36:17,257 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.164285
+2025-01-30 07:36:17,257 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.5240670000000001
+2025-01-30 07:36:17,257 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:36:17,257 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.6883520000000001
+2025-01-30 07:36:17,258 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:36:17,258 - INFO     - offloading_algo.py:evaluation:32         - DS:           7424.0
+2025-01-30 07:36:17,258 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.338912
+2025-01-30 07:36:17,258 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.34944
+2025-01-30 07:36:17,258 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:36:17,258 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:36:17,258 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:36:17,258 - INFO     - offloading_algo.py:evaluation:32         - DS:           4400.0
+2025-01-30 07:36:17,258 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.512431
+2025-01-30 07:36:17,258 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.175921
+2025-01-30 07:36:17,258 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:36:17,258 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:36:17,258 - INFO     - offloading_algo.py:device_only_evaluation:87 - Performing Device Only Offloading:
+2025-01-30 07:36:17,258 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:36:17,258 - INFO     - offloading_algo.py:evaluation:32         - DS:           2304.0
+2025-01-30 07:36:17,258 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.688352
+2025-01-30 07:36:17,259 - INFO     - offloading_algo.py:evaluation:34         - CE:           0
+2025-01-30 07:36:17,259 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:36:17,259 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:36:17,259 - INFO     - offloading_algo.py:static_offloading:116 - Computation Completed - Offloading Summary:
+2025-01-30 07:36:17,259 - INFO     - offloading_algo.py:static_offloading:117 - Lowest Evaluation: 0.688352
+2025-01-30 07:36:17,259 - INFO     - offloading_algo.py:static_offloading:118 - Best Offloading Layer: 1
+2025-01-30 07:36:17,259 - INFO     - offloading_algo.py:static_offloading:119 - Ended Offloading Process
+2025-01-30 07:36:17,260 - INFO     - offloading_algo.py:static_offloading:109 - Performing Static Offloading:
+2025-01-30 07:36:17,260 - INFO     - offloading_algo.py:static_offloading:110 - Total Neural Network Layers: 4
+2025-01-30 07:36:17,260 - INFO     - offloading_algo.py:edge_only_computation_evaluation:47 - Performing Edge Only Offloading:
+2025-01-30 07:36:17,260 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:36:17,260 - INFO     - offloading_algo.py:evaluation:32         - DS:           0
+2025-01-30 07:36:17,261 - INFO     - offloading_algo.py:evaluation:33         - IC:           0
+2025-01-30 07:36:17,261 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.688352
+2025-01-30 07:36:17,261 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0
+2025-01-30 07:36:17,261 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:36:17,261 - INFO     - offloading_algo.py:mixed_computation_evaluation:65 - Performing Partial Offloading:
+2025-01-30 07:36:17,261 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:36:17,261 - INFO     - offloading_algo.py:evaluation:32         - DS:           44288.0
+2025-01-30 07:36:17,261 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.164285
+2025-01-30 07:36:17,261 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.5240670000000001
+2025-01-30 07:36:17,261 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:36:17,261 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  44288.688352
+2025-01-30 07:36:17,261 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:36:17,261 - INFO     - offloading_algo.py:evaluation:32         - DS:           7424.0
+2025-01-30 07:36:17,261 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.338912
+2025-01-30 07:36:17,261 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.34944
+2025-01-30 07:36:17,261 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:36:17,262 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  7424.688352
+2025-01-30 07:36:17,262 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:36:17,262 - INFO     - offloading_algo.py:evaluation:32         - DS:           4400.0
+2025-01-30 07:36:17,262 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.512431
+2025-01-30 07:36:17,262 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.175921
+2025-01-30 07:36:17,262 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:36:17,262 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  4400.688352
+2025-01-30 07:36:17,262 - INFO     - offloading_algo.py:device_only_evaluation:87 - Performing Device Only Offloading:
+2025-01-30 07:36:17,262 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:36:17,262 - INFO     - offloading_algo.py:evaluation:32         - DS:           2304.0
+2025-01-30 07:36:17,262 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.688352
+2025-01-30 07:36:17,262 - INFO     - offloading_algo.py:evaluation:34         - CE:           0
+2025-01-30 07:36:17,262 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:36:17,262 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  2304.688352
+2025-01-30 07:36:17,262 - INFO     - offloading_algo.py:static_offloading:116 - Computation Completed - Offloading Summary:
+2025-01-30 07:36:17,262 - INFO     - offloading_algo.py:static_offloading:117 - Lowest Evaluation: 2304.688352
+2025-01-30 07:36:17,263 - INFO     - offloading_algo.py:static_offloading:118 - Best Offloading Layer: 3
+2025-01-30 07:36:17,263 - INFO     - offloading_algo.py:static_offloading:119 - Ended Offloading Process
+2025-01-30 07:36:49,541 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: 0.001973390579223633 seconds
+2025-01-30 07:36:49,708 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: 0.0052988529205322266 seconds
+2025-01-30 07:36:49,759 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: 0.00495147705078125 seconds
+2025-01-30 07:36:49,789 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: 0.0007569789886474609 seconds
+2025-01-30 07:36:49,820 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: 0.0012350082397460938 seconds
+2025-01-30 07:36:49,828 - INFO     - offloading_algo.py:static_offloading:109 - Performing Static Offloading:
+2025-01-30 07:36:49,828 - INFO     - offloading_algo.py:static_offloading:110 - Total Neural Network Layers: 4
+2025-01-30 07:36:49,828 - INFO     - offloading_algo.py:edge_only_computation_evaluation:47 - Performing Edge Only Offloading:
+2025-01-30 07:36:49,828 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:36:49,828 - INFO     - offloading_algo.py:evaluation:32         - DS:           0
+2025-01-30 07:36:49,828 - INFO     - offloading_algo.py:evaluation:33         - IC:           0
+2025-01-30 07:36:49,828 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.688352
+2025-01-30 07:36:49,828 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0
+2025-01-30 07:36:49,828 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:36:49,828 - INFO     - offloading_algo.py:mixed_computation_evaluation:65 - Performing Partial Offloading:
+2025-01-30 07:36:49,828 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:36:49,828 - INFO     - offloading_algo.py:evaluation:32         - DS:           44288.0
+2025-01-30 07:36:49,828 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.164285
+2025-01-30 07:36:49,829 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.5240670000000001
+2025-01-30 07:36:49,829 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:36:49,829 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.6883520000000001
+2025-01-30 07:36:49,829 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:36:49,829 - INFO     - offloading_algo.py:evaluation:32         - DS:           7424.0
+2025-01-30 07:36:49,829 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.338912
+2025-01-30 07:36:49,829 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.34944
+2025-01-30 07:36:49,829 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:36:49,829 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:36:49,829 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:36:49,829 - INFO     - offloading_algo.py:evaluation:32         - DS:           4400.0
+2025-01-30 07:36:49,829 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.512431
+2025-01-30 07:36:49,829 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.175921
+2025-01-30 07:36:49,829 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:36:49,829 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:36:49,830 - INFO     - offloading_algo.py:device_only_evaluation:87 - Performing Device Only Offloading:
+2025-01-30 07:36:49,830 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:36:49,830 - INFO     - offloading_algo.py:evaluation:32         - DS:           2304.0
+2025-01-30 07:36:49,830 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.688352
+2025-01-30 07:36:49,830 - INFO     - offloading_algo.py:evaluation:34         - CE:           0
+2025-01-30 07:36:49,830 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:36:49,830 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:36:49,830 - INFO     - offloading_algo.py:static_offloading:116 - Computation Completed - Offloading Summary:
+2025-01-30 07:36:49,830 - INFO     - offloading_algo.py:static_offloading:117 - Lowest Evaluation: 0.688352
+2025-01-30 07:36:49,830 - INFO     - offloading_algo.py:static_offloading:118 - Best Offloading Layer: 1
+2025-01-30 07:36:49,830 - INFO     - offloading_algo.py:static_offloading:119 - Ended Offloading Process
+2025-01-30 07:36:49,831 - INFO     - offloading_algo.py:static_offloading:109 - Performing Static Offloading:
+2025-01-30 07:36:49,831 - INFO     - offloading_algo.py:static_offloading:110 - Total Neural Network Layers: 4
+2025-01-30 07:36:49,831 - INFO     - offloading_algo.py:edge_only_computation_evaluation:47 - Performing Edge Only Offloading:
+2025-01-30 07:36:49,831 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:36:49,832 - INFO     - offloading_algo.py:evaluation:32         - DS:           0
+2025-01-30 07:36:49,832 - INFO     - offloading_algo.py:evaluation:33         - IC:           0
+2025-01-30 07:36:49,832 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.688352
+2025-01-30 07:36:49,832 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0
+2025-01-30 07:36:49,832 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:36:49,832 - INFO     - offloading_algo.py:mixed_computation_evaluation:65 - Performing Partial Offloading:
+2025-01-30 07:36:49,832 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:36:49,832 - INFO     - offloading_algo.py:evaluation:32         - DS:           44288.0
+2025-01-30 07:36:49,832 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.164285
+2025-01-30 07:36:49,832 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.5240670000000001
+2025-01-30 07:36:49,832 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:36:49,832 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  44288.688352
+2025-01-30 07:36:49,832 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:36:49,832 - INFO     - offloading_algo.py:evaluation:32         - DS:           7424.0
+2025-01-30 07:36:49,832 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.338912
+2025-01-30 07:36:49,833 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.34944
+2025-01-30 07:36:49,833 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:36:49,833 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  7424.688352
+2025-01-30 07:36:49,833 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:36:49,833 - INFO     - offloading_algo.py:evaluation:32         - DS:           4400.0
+2025-01-30 07:36:49,833 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.512431
+2025-01-30 07:36:49,833 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.175921
+2025-01-30 07:36:49,833 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:36:49,833 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  4400.688352
+2025-01-30 07:36:49,833 - INFO     - offloading_algo.py:device_only_evaluation:87 - Performing Device Only Offloading:
+2025-01-30 07:36:49,833 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:36:49,833 - INFO     - offloading_algo.py:evaluation:32         - DS:           2304.0
+2025-01-30 07:36:49,833 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.688352
+2025-01-30 07:36:49,833 - INFO     - offloading_algo.py:evaluation:34         - CE:           0
+2025-01-30 07:36:49,833 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:36:49,833 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  2304.688352
+2025-01-30 07:36:49,834 - INFO     - offloading_algo.py:static_offloading:116 - Computation Completed - Offloading Summary:
+2025-01-30 07:36:49,834 - INFO     - offloading_algo.py:static_offloading:117 - Lowest Evaluation: 2304.688352
+2025-01-30 07:36:49,834 - INFO     - offloading_algo.py:static_offloading:118 - Best Offloading Layer: 3
+2025-01-30 07:36:49,834 - INFO     - offloading_algo.py:static_offloading:119 - Ended Offloading Process
+2025-01-30 07:39:39,461 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: -0.0041501522064208984 seconds
+2025-01-30 07:39:39,602 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: -0.003468751907348633 seconds
+2025-01-30 07:39:39,645 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: -0.00040721893310546875 seconds
+2025-01-30 07:39:39,691 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: -0.004096508026123047 seconds
+2025-01-30 07:39:39,721 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: -0.004017353057861328 seconds
+2025-01-30 07:39:39,728 - INFO     - offloading_algo.py:static_offloading:109 - Performing Static Offloading:
+2025-01-30 07:39:39,728 - INFO     - offloading_algo.py:static_offloading:110 - Total Neural Network Layers: 4
+2025-01-30 07:39:39,728 - INFO     - offloading_algo.py:edge_only_computation_evaluation:47 - Performing Edge Only Offloading:
+2025-01-30 07:39:39,728 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:39:39,728 - INFO     - offloading_algo.py:evaluation:32         - DS:           0
+2025-01-30 07:39:39,728 - INFO     - offloading_algo.py:evaluation:33         - IC:           0
+2025-01-30 07:39:39,728 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.688352
+2025-01-30 07:39:39,728 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0
+2025-01-30 07:39:39,729 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:39:39,729 - INFO     - offloading_algo.py:mixed_computation_evaluation:65 - Performing Partial Offloading:
+2025-01-30 07:39:39,729 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:39:39,729 - INFO     - offloading_algo.py:evaluation:32         - DS:           44288.0
+2025-01-30 07:39:39,729 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.164285
+2025-01-30 07:39:39,729 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.5240670000000001
+2025-01-30 07:39:39,729 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:39:39,729 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.6883520000000001
+2025-01-30 07:39:39,729 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:39:39,729 - INFO     - offloading_algo.py:evaluation:32         - DS:           7424.0
+2025-01-30 07:39:39,729 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.338912
+2025-01-30 07:39:39,729 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.34944
+2025-01-30 07:39:39,729 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:39:39,729 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:39:39,729 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:39:39,729 - INFO     - offloading_algo.py:evaluation:32         - DS:           4400.0
+2025-01-30 07:39:39,729 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.512431
+2025-01-30 07:39:39,730 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.175921
+2025-01-30 07:39:39,730 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:39:39,730 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:39:39,730 - INFO     - offloading_algo.py:device_only_evaluation:87 - Performing Device Only Offloading:
+2025-01-30 07:39:39,730 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:39:39,730 - INFO     - offloading_algo.py:evaluation:32         - DS:           2304.0
+2025-01-30 07:39:39,730 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.688352
+2025-01-30 07:39:39,730 - INFO     - offloading_algo.py:evaluation:34         - CE:           0
+2025-01-30 07:39:39,730 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:39:39,730 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:39:39,730 - INFO     - offloading_algo.py:static_offloading:116 - Computation Completed - Offloading Summary:
+2025-01-30 07:39:39,730 - INFO     - offloading_algo.py:static_offloading:117 - Lowest Evaluation: 0.688352
+2025-01-30 07:39:39,730 - INFO     - offloading_algo.py:static_offloading:118 - Best Offloading Layer: 1
+2025-01-30 07:39:39,730 - INFO     - offloading_algo.py:static_offloading:119 - Ended Offloading Process
+2025-01-30 07:39:39,731 - INFO     - offloading_algo.py:static_offloading:109 - Performing Static Offloading:
+2025-01-30 07:39:39,732 - INFO     - offloading_algo.py:static_offloading:110 - Total Neural Network Layers: 4
+2025-01-30 07:39:39,732 - INFO     - offloading_algo.py:edge_only_computation_evaluation:47 - Performing Edge Only Offloading:
+2025-01-30 07:39:39,732 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:39:39,732 - INFO     - offloading_algo.py:evaluation:32         - DS:           0
+2025-01-30 07:39:39,732 - INFO     - offloading_algo.py:evaluation:33         - IC:           0
+2025-01-30 07:39:39,732 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.688352
+2025-01-30 07:39:39,732 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0
+2025-01-30 07:39:39,732 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:39:39,732 - INFO     - offloading_algo.py:mixed_computation_evaluation:65 - Performing Partial Offloading:
+2025-01-30 07:39:39,732 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:39:39,732 - INFO     - offloading_algo.py:evaluation:32         - DS:           44288.0
+2025-01-30 07:39:39,732 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.164285
+2025-01-30 07:39:39,732 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.5240670000000001
+2025-01-30 07:39:39,732 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:39:39,732 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  44288.688352
+2025-01-30 07:39:39,733 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:39:39,733 - INFO     - offloading_algo.py:evaluation:32         - DS:           7424.0
+2025-01-30 07:39:39,733 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.338912
+2025-01-30 07:39:39,733 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.34944
+2025-01-30 07:39:39,733 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:39:39,733 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  7424.688352
+2025-01-30 07:39:39,733 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:39:39,733 - INFO     - offloading_algo.py:evaluation:32         - DS:           4400.0
+2025-01-30 07:39:39,733 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.512431
+2025-01-30 07:39:39,733 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.175921
+2025-01-30 07:39:39,733 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:39:39,733 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  4400.688352
+2025-01-30 07:39:39,733 - INFO     - offloading_algo.py:device_only_evaluation:87 - Performing Device Only Offloading:
+2025-01-30 07:39:39,733 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:39:39,733 - INFO     - offloading_algo.py:evaluation:32         - DS:           2304.0
+2025-01-30 07:39:39,733 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.688352
+2025-01-30 07:39:39,733 - INFO     - offloading_algo.py:evaluation:34         - CE:           0
+2025-01-30 07:39:39,734 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:39:39,734 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  2304.688352
+2025-01-30 07:39:39,734 - INFO     - offloading_algo.py:static_offloading:116 - Computation Completed - Offloading Summary:
+2025-01-30 07:39:39,734 - INFO     - offloading_algo.py:static_offloading:117 - Lowest Evaluation: 2304.688352
+2025-01-30 07:39:39,734 - INFO     - offloading_algo.py:static_offloading:118 - Best Offloading Layer: 3
+2025-01-30 07:39:39,734 - INFO     - offloading_algo.py:static_offloading:119 - Ended Offloading Process
+2025-01-30 07:40:32,625 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: -0.009270429611206055 seconds
+2025-01-30 07:40:32,770 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: -0.0033881664276123047 seconds
+2025-01-30 07:40:32,798 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: -0.0019845962524414062 seconds
+2025-01-30 07:40:32,831 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: -0.003679990768432617 seconds
+2025-01-30 07:40:32,858 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: -0.0037598609924316406 seconds
+2025-01-30 07:40:32,864 - INFO     - offloading_algo.py:static_offloading:109 - Performing Static Offloading:
+2025-01-30 07:40:32,864 - INFO     - offloading_algo.py:static_offloading:110 - Total Neural Network Layers: 4
+2025-01-30 07:40:32,864 - INFO     - offloading_algo.py:edge_only_computation_evaluation:47 - Performing Edge Only Offloading:
+2025-01-30 07:40:32,864 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:40:32,865 - INFO     - offloading_algo.py:evaluation:32         - DS:           0
+2025-01-30 07:40:32,865 - INFO     - offloading_algo.py:evaluation:33         - IC:           0
+2025-01-30 07:40:32,865 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.688352
+2025-01-30 07:40:32,865 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0
+2025-01-30 07:40:32,865 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:40:32,865 - INFO     - offloading_algo.py:mixed_computation_evaluation:65 - Performing Partial Offloading:
+2025-01-30 07:40:32,865 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:40:32,865 - INFO     - offloading_algo.py:evaluation:32         - DS:           44288.0
+2025-01-30 07:40:32,865 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.164285
+2025-01-30 07:40:32,865 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.5240670000000001
+2025-01-30 07:40:32,865 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:40:32,865 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.6883520000000001
+2025-01-30 07:40:32,865 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:40:32,865 - INFO     - offloading_algo.py:evaluation:32         - DS:           7424.0
+2025-01-30 07:40:32,865 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.338912
+2025-01-30 07:40:32,866 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.34944
+2025-01-30 07:40:32,866 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:40:32,866 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:40:32,866 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:40:32,866 - INFO     - offloading_algo.py:evaluation:32         - DS:           4400.0
+2025-01-30 07:40:32,866 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.512431
+2025-01-30 07:40:32,866 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.175921
+2025-01-30 07:40:32,866 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:40:32,866 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:40:32,866 - INFO     - offloading_algo.py:device_only_evaluation:87 - Performing Device Only Offloading:
+2025-01-30 07:40:32,866 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:40:32,866 - INFO     - offloading_algo.py:evaluation:32         - DS:           2304.0
+2025-01-30 07:40:32,866 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.688352
+2025-01-30 07:40:32,866 - INFO     - offloading_algo.py:evaluation:34         - CE:           0
+2025-01-30 07:40:32,866 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:40:32,866 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:40:32,866 - INFO     - offloading_algo.py:static_offloading:116 - Computation Completed - Offloading Summary:
+2025-01-30 07:40:32,867 - INFO     - offloading_algo.py:static_offloading:117 - Lowest Evaluation: 0.688352
+2025-01-30 07:40:32,867 - INFO     - offloading_algo.py:static_offloading:118 - Best Offloading Layer: 1
+2025-01-30 07:40:32,867 - INFO     - offloading_algo.py:static_offloading:119 - Ended Offloading Process
+2025-01-30 07:40:32,868 - INFO     - offloading_algo.py:static_offloading:109 - Performing Static Offloading:
+2025-01-30 07:40:32,868 - INFO     - offloading_algo.py:static_offloading:110 - Total Neural Network Layers: 4
+2025-01-30 07:40:32,868 - INFO     - offloading_algo.py:edge_only_computation_evaluation:47 - Performing Edge Only Offloading:
+2025-01-30 07:40:32,868 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:40:32,868 - INFO     - offloading_algo.py:evaluation:32         - DS:           0
+2025-01-30 07:40:32,868 - INFO     - offloading_algo.py:evaluation:33         - IC:           0
+2025-01-30 07:40:32,868 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.688352
+2025-01-30 07:40:32,868 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0
+2025-01-30 07:40:32,868 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:40:32,869 - INFO     - offloading_algo.py:mixed_computation_evaluation:65 - Performing Partial Offloading:
+2025-01-30 07:40:32,869 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:40:32,869 - INFO     - offloading_algo.py:evaluation:32         - DS:           44288.0
+2025-01-30 07:40:32,869 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.164285
+2025-01-30 07:40:32,869 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.5240670000000001
+2025-01-30 07:40:32,869 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:40:32,869 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  44288.688352
+2025-01-30 07:40:32,869 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:40:32,869 - INFO     - offloading_algo.py:evaluation:32         - DS:           7424.0
+2025-01-30 07:40:32,869 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.338912
+2025-01-30 07:40:32,869 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.34944
+2025-01-30 07:40:32,869 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:40:32,869 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  7424.688352
+2025-01-30 07:40:32,869 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:40:32,869 - INFO     - offloading_algo.py:evaluation:32         - DS:           4400.0
+2025-01-30 07:40:32,869 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.512431
+2025-01-30 07:40:32,869 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.175921
+2025-01-30 07:40:32,870 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:40:32,870 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  4400.688352
+2025-01-30 07:40:32,870 - INFO     - offloading_algo.py:device_only_evaluation:87 - Performing Device Only Offloading:
+2025-01-30 07:40:32,870 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:40:32,870 - INFO     - offloading_algo.py:evaluation:32         - DS:           2304.0
+2025-01-30 07:40:32,870 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.688352
+2025-01-30 07:40:32,870 - INFO     - offloading_algo.py:evaluation:34         - CE:           0
+2025-01-30 07:40:32,870 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:40:32,870 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  2304.688352
+2025-01-30 07:40:32,870 - INFO     - offloading_algo.py:static_offloading:116 - Computation Completed - Offloading Summary:
+2025-01-30 07:40:32,870 - INFO     - offloading_algo.py:static_offloading:117 - Lowest Evaluation: 2304.688352
+2025-01-30 07:40:32,870 - INFO     - offloading_algo.py:static_offloading:118 - Best Offloading Layer: 3
+2025-01-30 07:40:32,870 - INFO     - offloading_algo.py:static_offloading:119 - Ended Offloading Process
+2025-01-30 07:41:16,927 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: -0.007104635238647461 seconds
+2025-01-30 07:41:17,063 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: -0.0033321380615234375 seconds
+2025-01-30 07:41:17,104 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: 0.0033588409423828125 seconds
+2025-01-30 07:41:17,128 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: -0.003202676773071289 seconds
+2025-01-30 07:41:17,155 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: -0.004418849945068359 seconds
+2025-01-30 07:41:17,161 - INFO     - offloading_algo.py:static_offloading:109 - Performing Static Offloading:
+2025-01-30 07:41:17,162 - INFO     - offloading_algo.py:static_offloading:110 - Total Neural Network Layers: 4
+2025-01-30 07:41:17,162 - INFO     - offloading_algo.py:edge_only_computation_evaluation:47 - Performing Edge Only Offloading:
+2025-01-30 07:41:17,162 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:41:17,162 - INFO     - offloading_algo.py:evaluation:32         - DS:           0
+2025-01-30 07:41:17,162 - INFO     - offloading_algo.py:evaluation:33         - IC:           0
+2025-01-30 07:41:17,162 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.688352
+2025-01-30 07:41:17,162 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0
+2025-01-30 07:41:17,162 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:41:17,162 - INFO     - offloading_algo.py:mixed_computation_evaluation:65 - Performing Partial Offloading:
+2025-01-30 07:41:17,162 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:41:17,162 - INFO     - offloading_algo.py:evaluation:32         - DS:           44288.0
+2025-01-30 07:41:17,162 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.164285
+2025-01-30 07:41:17,162 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.5240670000000001
+2025-01-30 07:41:17,162 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:41:17,163 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.6883520000000001
+2025-01-30 07:41:17,163 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:41:17,163 - INFO     - offloading_algo.py:evaluation:32         - DS:           7424.0
+2025-01-30 07:41:17,163 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.338912
+2025-01-30 07:41:17,163 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.34944
+2025-01-30 07:41:17,163 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:41:17,163 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:41:17,163 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:41:17,163 - INFO     - offloading_algo.py:evaluation:32         - DS:           4400.0
+2025-01-30 07:41:17,163 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.512431
+2025-01-30 07:41:17,163 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.175921
+2025-01-30 07:41:17,163 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:41:17,163 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:41:17,163 - INFO     - offloading_algo.py:device_only_evaluation:87 - Performing Device Only Offloading:
+2025-01-30 07:41:17,163 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:41:17,163 - INFO     - offloading_algo.py:evaluation:32         - DS:           2304.0
+2025-01-30 07:41:17,163 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.688352
+2025-01-30 07:41:17,164 - INFO     - offloading_algo.py:evaluation:34         - CE:           0
+2025-01-30 07:41:17,164 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:41:17,164 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:41:17,164 - INFO     - offloading_algo.py:static_offloading:116 - Computation Completed - Offloading Summary:
+2025-01-30 07:41:17,164 - INFO     - offloading_algo.py:static_offloading:117 - Lowest Evaluation: 0.688352
+2025-01-30 07:41:17,164 - INFO     - offloading_algo.py:static_offloading:118 - Best Offloading Layer: 1
+2025-01-30 07:41:17,164 - INFO     - offloading_algo.py:static_offloading:119 - Ended Offloading Process
+2025-01-30 07:41:17,165 - INFO     - offloading_algo.py:static_offloading:109 - Performing Static Offloading:
+2025-01-30 07:41:17,165 - INFO     - offloading_algo.py:static_offloading:110 - Total Neural Network Layers: 4
+2025-01-30 07:41:17,165 - INFO     - offloading_algo.py:edge_only_computation_evaluation:47 - Performing Edge Only Offloading:
+2025-01-30 07:41:17,165 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:41:17,165 - INFO     - offloading_algo.py:evaluation:32         - DS:           0
+2025-01-30 07:41:17,165 - INFO     - offloading_algo.py:evaluation:33         - IC:           0
+2025-01-30 07:41:17,166 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.688352
+2025-01-30 07:41:17,166 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0
+2025-01-30 07:41:17,166 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:41:17,166 - INFO     - offloading_algo.py:mixed_computation_evaluation:65 - Performing Partial Offloading:
+2025-01-30 07:41:17,166 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:41:17,166 - INFO     - offloading_algo.py:evaluation:32         - DS:           44288.0
+2025-01-30 07:41:17,166 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.164285
+2025-01-30 07:41:17,166 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.5240670000000001
+2025-01-30 07:41:17,166 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:41:17,166 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  44288.688352
+2025-01-30 07:41:17,166 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:41:17,166 - INFO     - offloading_algo.py:evaluation:32         - DS:           7424.0
+2025-01-30 07:41:17,166 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.338912
+2025-01-30 07:41:17,166 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.34944
+2025-01-30 07:41:17,166 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:41:17,166 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  7424.688352
+2025-01-30 07:41:17,166 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:41:17,167 - INFO     - offloading_algo.py:evaluation:32         - DS:           4400.0
+2025-01-30 07:41:17,167 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.512431
+2025-01-30 07:41:17,167 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.175921
+2025-01-30 07:41:17,167 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:41:17,167 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  4400.688352
+2025-01-30 07:41:17,167 - INFO     - offloading_algo.py:device_only_evaluation:87 - Performing Device Only Offloading:
+2025-01-30 07:41:17,167 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:41:17,167 - INFO     - offloading_algo.py:evaluation:32         - DS:           2304.0
+2025-01-30 07:41:17,167 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.688352
+2025-01-30 07:41:17,167 - INFO     - offloading_algo.py:evaluation:34         - CE:           0
+2025-01-30 07:41:17,167 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:41:17,167 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  2304.688352
+2025-01-30 07:41:17,167 - INFO     - offloading_algo.py:static_offloading:116 - Computation Completed - Offloading Summary:
+2025-01-30 07:41:17,167 - INFO     - offloading_algo.py:static_offloading:117 - Lowest Evaluation: 2304.688352
+2025-01-30 07:41:17,167 - INFO     - offloading_algo.py:static_offloading:118 - Best Offloading Layer: 3
+2025-01-30 07:41:17,167 - INFO     - offloading_algo.py:static_offloading:119 - Ended Offloading Process
+2025-01-30 07:42:14,124 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: -0.003302335739135742 seconds
+2025-01-30 07:42:14,267 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: -0.0019290447235107422 seconds
+2025-01-30 07:42:14,318 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: -0.001886129379272461 seconds
+2025-01-30 07:42:14,352 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: -0.0019001960754394531 seconds
+2025-01-30 07:42:14,397 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: -0.004415035247802734 seconds
+2025-01-30 07:42:14,404 - INFO     - offloading_algo.py:static_offloading:109 - Performing Static Offloading:
+2025-01-30 07:42:14,404 - INFO     - offloading_algo.py:static_offloading:110 - Total Neural Network Layers: 4
+2025-01-30 07:42:14,404 - INFO     - offloading_algo.py:edge_only_computation_evaluation:47 - Performing Edge Only Offloading:
+2025-01-30 07:42:14,404 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:42:14,404 - INFO     - offloading_algo.py:evaluation:32         - DS:           0
+2025-01-30 07:42:14,404 - INFO     - offloading_algo.py:evaluation:33         - IC:           0
+2025-01-30 07:42:14,405 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.688352
+2025-01-30 07:42:14,405 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0
+2025-01-30 07:42:14,405 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:42:14,405 - INFO     - offloading_algo.py:mixed_computation_evaluation:65 - Performing Partial Offloading:
+2025-01-30 07:42:14,405 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:42:14,405 - INFO     - offloading_algo.py:evaluation:32         - DS:           44288.0
+2025-01-30 07:42:14,405 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.164285
+2025-01-30 07:42:14,405 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.5240670000000001
+2025-01-30 07:42:14,405 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:42:14,405 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.6883520000000001
+2025-01-30 07:42:14,405 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:42:14,405 - INFO     - offloading_algo.py:evaluation:32         - DS:           7424.0
+2025-01-30 07:42:14,405 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.338912
+2025-01-30 07:42:14,405 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.34944
+2025-01-30 07:42:14,405 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:42:14,405 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:42:14,406 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:42:14,406 - INFO     - offloading_algo.py:evaluation:32         - DS:           4400.0
+2025-01-30 07:42:14,406 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.512431
+2025-01-30 07:42:14,406 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.175921
+2025-01-30 07:42:14,406 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:42:14,406 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:42:14,406 - INFO     - offloading_algo.py:device_only_evaluation:87 - Performing Device Only Offloading:
+2025-01-30 07:42:14,406 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:42:14,406 - INFO     - offloading_algo.py:evaluation:32         - DS:           2304.0
+2025-01-30 07:42:14,406 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.688352
+2025-01-30 07:42:14,406 - INFO     - offloading_algo.py:evaluation:34         - CE:           0
+2025-01-30 07:42:14,406 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:42:14,406 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:42:14,406 - INFO     - offloading_algo.py:static_offloading:116 - Computation Completed - Offloading Summary:
+2025-01-30 07:42:14,406 - INFO     - offloading_algo.py:static_offloading:117 - Lowest Evaluation: 0.688352
+2025-01-30 07:42:14,406 - INFO     - offloading_algo.py:static_offloading:118 - Best Offloading Layer: 1
+2025-01-30 07:42:14,406 - INFO     - offloading_algo.py:static_offloading:119 - Ended Offloading Process
+2025-01-30 07:42:14,408 - INFO     - offloading_algo.py:static_offloading:109 - Performing Static Offloading:
+2025-01-30 07:42:14,408 - INFO     - offloading_algo.py:static_offloading:110 - Total Neural Network Layers: 4
+2025-01-30 07:42:14,408 - INFO     - offloading_algo.py:edge_only_computation_evaluation:47 - Performing Edge Only Offloading:
+2025-01-30 07:42:14,408 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:42:14,408 - INFO     - offloading_algo.py:evaluation:32         - DS:           0
+2025-01-30 07:42:14,408 - INFO     - offloading_algo.py:evaluation:33         - IC:           0
+2025-01-30 07:42:14,408 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.688352
+2025-01-30 07:42:14,408 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0
+2025-01-30 07:42:14,408 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:42:14,408 - INFO     - offloading_algo.py:mixed_computation_evaluation:65 - Performing Partial Offloading:
+2025-01-30 07:42:14,408 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:42:14,408 - INFO     - offloading_algo.py:evaluation:32         - DS:           44288.0
+2025-01-30 07:42:14,408 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.164285
+2025-01-30 07:42:14,408 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.5240670000000001
+2025-01-30 07:42:14,409 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:42:14,409 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  44288.688352
+2025-01-30 07:42:14,409 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:42:14,409 - INFO     - offloading_algo.py:evaluation:32         - DS:           7424.0
+2025-01-30 07:42:14,409 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.338912
+2025-01-30 07:42:14,409 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.34944
+2025-01-30 07:42:14,409 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:42:14,409 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  7424.688352
+2025-01-30 07:42:14,409 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:42:14,409 - INFO     - offloading_algo.py:evaluation:32         - DS:           4400.0
+2025-01-30 07:42:14,409 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.512431
+2025-01-30 07:42:14,409 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.175921
+2025-01-30 07:42:14,409 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:42:14,409 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  4400.688352
+2025-01-30 07:42:14,409 - INFO     - offloading_algo.py:device_only_evaluation:87 - Performing Device Only Offloading:
+2025-01-30 07:42:14,409 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:42:14,409 - INFO     - offloading_algo.py:evaluation:32         - DS:           2304.0
+2025-01-30 07:42:14,410 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.688352
+2025-01-30 07:42:14,410 - INFO     - offloading_algo.py:evaluation:34         - CE:           0
+2025-01-30 07:42:14,410 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:42:14,410 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  2304.688352
+2025-01-30 07:42:14,410 - INFO     - offloading_algo.py:static_offloading:116 - Computation Completed - Offloading Summary:
+2025-01-30 07:42:14,410 - INFO     - offloading_algo.py:static_offloading:117 - Lowest Evaluation: 2304.688352
+2025-01-30 07:42:14,410 - INFO     - offloading_algo.py:static_offloading:118 - Best Offloading Layer: 3
+2025-01-30 07:42:14,410 - INFO     - offloading_algo.py:static_offloading:119 - Ended Offloading Process
+2025-01-30 07:42:50,432 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: -0.004414796829223633 seconds
+2025-01-30 07:42:50,581 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: -0.004494428634643555 seconds
+2025-01-30 07:42:50,628 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: -0.0038580894470214844 seconds
+2025-01-30 07:42:50,659 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: -0.003109455108642578 seconds
+2025-01-30 07:42:50,687 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: -0.003110647201538086 seconds
+2025-01-30 07:42:50,694 - INFO     - offloading_algo.py:static_offloading:109 - Performing Static Offloading:
+2025-01-30 07:42:50,694 - INFO     - offloading_algo.py:static_offloading:110 - Total Neural Network Layers: 4
+2025-01-30 07:42:50,694 - INFO     - offloading_algo.py:edge_only_computation_evaluation:47 - Performing Edge Only Offloading:
+2025-01-30 07:42:50,694 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:42:50,694 - INFO     - offloading_algo.py:evaluation:32         - DS:           0
+2025-01-30 07:42:50,694 - INFO     - offloading_algo.py:evaluation:33         - IC:           0
+2025-01-30 07:42:50,694 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.688352
+2025-01-30 07:42:50,695 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0
+2025-01-30 07:42:50,695 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:42:50,695 - INFO     - offloading_algo.py:mixed_computation_evaluation:65 - Performing Partial Offloading:
+2025-01-30 07:42:50,695 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:42:50,695 - INFO     - offloading_algo.py:evaluation:32         - DS:           44288.0
+2025-01-30 07:42:50,695 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.164285
+2025-01-30 07:42:50,695 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.5240670000000001
+2025-01-30 07:42:50,695 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:42:50,695 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.6883520000000001
+2025-01-30 07:42:50,695 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:42:50,695 - INFO     - offloading_algo.py:evaluation:32         - DS:           7424.0
+2025-01-30 07:42:50,695 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.338912
+2025-01-30 07:42:50,695 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.34944
+2025-01-30 07:42:50,695 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:42:50,695 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:42:50,695 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:42:50,696 - INFO     - offloading_algo.py:evaluation:32         - DS:           4400.0
+2025-01-30 07:42:50,696 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.512431
+2025-01-30 07:42:50,696 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.175921
+2025-01-30 07:42:50,696 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:42:50,696 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:42:50,696 - INFO     - offloading_algo.py:device_only_evaluation:87 - Performing Device Only Offloading:
+2025-01-30 07:42:50,696 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:42:50,696 - INFO     - offloading_algo.py:evaluation:32         - DS:           2304.0
+2025-01-30 07:42:50,696 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.688352
+2025-01-30 07:42:50,696 - INFO     - offloading_algo.py:evaluation:34         - CE:           0
+2025-01-30 07:42:50,696 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:42:50,696 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:42:50,696 - INFO     - offloading_algo.py:static_offloading:116 - Computation Completed - Offloading Summary:
+2025-01-30 07:42:50,696 - INFO     - offloading_algo.py:static_offloading:117 - Lowest Evaluation: 0.688352
+2025-01-30 07:42:50,696 - INFO     - offloading_algo.py:static_offloading:118 - Best Offloading Layer: 1
+2025-01-30 07:42:50,697 - INFO     - offloading_algo.py:static_offloading:119 - Ended Offloading Process
+2025-01-30 07:42:50,698 - INFO     - offloading_algo.py:static_offloading:109 - Performing Static Offloading:
+2025-01-30 07:42:50,698 - INFO     - offloading_algo.py:static_offloading:110 - Total Neural Network Layers: 4
+2025-01-30 07:42:50,698 - INFO     - offloading_algo.py:edge_only_computation_evaluation:47 - Performing Edge Only Offloading:
+2025-01-30 07:42:50,698 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:42:50,698 - INFO     - offloading_algo.py:evaluation:32         - DS:           0
+2025-01-30 07:42:50,698 - INFO     - offloading_algo.py:evaluation:33         - IC:           0
+2025-01-30 07:42:50,698 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.688352
+2025-01-30 07:42:50,698 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0
+2025-01-30 07:42:50,698 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:42:50,698 - INFO     - offloading_algo.py:mixed_computation_evaluation:65 - Performing Partial Offloading:
+2025-01-30 07:42:50,698 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:42:50,698 - INFO     - offloading_algo.py:evaluation:32         - DS:           44288.0
+2025-01-30 07:42:50,698 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.164285
+2025-01-30 07:42:50,699 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.5240670000000001
+2025-01-30 07:42:50,699 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:42:50,699 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  44288.688352
+2025-01-30 07:42:50,699 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:42:50,699 - INFO     - offloading_algo.py:evaluation:32         - DS:           7424.0
+2025-01-30 07:42:50,699 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.338912
+2025-01-30 07:42:50,699 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.34944
+2025-01-30 07:42:50,699 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:42:50,699 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  7424.688352
+2025-01-30 07:42:50,699 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:42:50,699 - INFO     - offloading_algo.py:evaluation:32         - DS:           4400.0
+2025-01-30 07:42:50,699 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.512431
+2025-01-30 07:42:50,699 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.175921
+2025-01-30 07:42:50,699 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:42:50,699 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  4400.688352
+2025-01-30 07:42:50,699 - INFO     - offloading_algo.py:device_only_evaluation:87 - Performing Device Only Offloading:
+2025-01-30 07:42:50,700 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:42:50,700 - INFO     - offloading_algo.py:evaluation:32         - DS:           2304.0
+2025-01-30 07:42:50,700 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.688352
+2025-01-30 07:42:50,700 - INFO     - offloading_algo.py:evaluation:34         - CE:           0
+2025-01-30 07:42:50,700 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:42:50,700 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  2304.688352
+2025-01-30 07:42:50,700 - INFO     - offloading_algo.py:static_offloading:116 - Computation Completed - Offloading Summary:
+2025-01-30 07:42:50,700 - INFO     - offloading_algo.py:static_offloading:117 - Lowest Evaluation: 2304.688352
+2025-01-30 07:42:50,700 - INFO     - offloading_algo.py:static_offloading:118 - Best Offloading Layer: 3
+2025-01-30 07:42:50,700 - INFO     - offloading_algo.py:static_offloading:119 - Ended Offloading Process
+2025-01-30 07:44:55,801 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: -0.007480621337890625 seconds
+2025-01-30 07:44:55,944 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: -0.006199359893798828 seconds
+2025-01-30 07:44:55,974 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: -0.006150007247924805 seconds
+2025-01-30 07:44:56,015 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: -0.003812551498413086 seconds
+2025-01-30 07:44:56,048 - DEBUG    - mqtt_client.py:sync_with_ntp:109         - Synchronized with NTP server. Offset: -0.006266117095947266 seconds
+2025-01-30 07:44:56,055 - INFO     - offloading_algo.py:static_offloading:109 - Performing Static Offloading:
+2025-01-30 07:44:56,055 - INFO     - offloading_algo.py:static_offloading:110 - Total Neural Network Layers: 4
+2025-01-30 07:44:56,055 - INFO     - offloading_algo.py:edge_only_computation_evaluation:47 - Performing Edge Only Offloading:
+2025-01-30 07:44:56,055 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:44:56,055 - INFO     - offloading_algo.py:evaluation:32         - DS:           0
+2025-01-30 07:44:56,055 - INFO     - offloading_algo.py:evaluation:33         - IC:           0
+2025-01-30 07:44:56,055 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.688352
+2025-01-30 07:44:56,055 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0
+2025-01-30 07:44:56,055 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:44:56,056 - INFO     - offloading_algo.py:mixed_computation_evaluation:65 - Performing Partial Offloading:
+2025-01-30 07:44:56,056 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:44:56,056 - INFO     - offloading_algo.py:evaluation:32         - DS:           44288.0
+2025-01-30 07:44:56,056 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.164285
+2025-01-30 07:44:56,056 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.5240670000000001
+2025-01-30 07:44:56,056 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:44:56,056 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.6883520000000001
+2025-01-30 07:44:56,056 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:44:56,056 - INFO     - offloading_algo.py:evaluation:32         - DS:           7424.0
+2025-01-30 07:44:56,056 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.338912
+2025-01-30 07:44:56,056 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.34944
+2025-01-30 07:44:56,056 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:44:56,056 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:44:56,056 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:44:56,056 - INFO     - offloading_algo.py:evaluation:32         - DS:           4400.0
+2025-01-30 07:44:56,056 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.512431
+2025-01-30 07:44:56,056 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.175921
+2025-01-30 07:44:56,057 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:44:56,057 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:44:56,057 - INFO     - offloading_algo.py:device_only_evaluation:87 - Performing Device Only Offloading:
+2025-01-30 07:44:56,057 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:44:56,057 - INFO     - offloading_algo.py:evaluation:32         - DS:           2304.0
+2025-01-30 07:44:56,057 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.688352
+2025-01-30 07:44:56,057 - INFO     - offloading_algo.py:evaluation:34         - CE:           0
+2025-01-30 07:44:56,057 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     4.4288e+22
+2025-01-30 07:44:56,057 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:44:56,057 - INFO     - offloading_algo.py:static_offloading:116 - Computation Completed - Offloading Summary:
+2025-01-30 07:44:56,057 - INFO     - offloading_algo.py:static_offloading:117 - Lowest Evaluation: 0.688352
+2025-01-30 07:44:56,057 - INFO     - offloading_algo.py:static_offloading:118 - Best Offloading Layer: 1
+2025-01-30 07:44:56,057 - INFO     - offloading_algo.py:static_offloading:119 - Ended Offloading Process
+2025-01-30 07:44:56,058 - INFO     - offloading_algo.py:static_offloading:109 - Performing Static Offloading:
+2025-01-30 07:44:56,059 - INFO     - offloading_algo.py:static_offloading:110 - Total Neural Network Layers: 4
+2025-01-30 07:44:56,059 - INFO     - offloading_algo.py:edge_only_computation_evaluation:47 - Performing Edge Only Offloading:
+2025-01-30 07:44:56,059 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:44:56,059 - INFO     - offloading_algo.py:evaluation:32         - DS:           0
+2025-01-30 07:44:56,059 - INFO     - offloading_algo.py:evaluation:33         - IC:           0
+2025-01-30 07:44:56,059 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.688352
+2025-01-30 07:44:56,059 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0
+2025-01-30 07:44:56,059 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  0.688352
+2025-01-30 07:44:56,059 - INFO     - offloading_algo.py:mixed_computation_evaluation:65 - Performing Partial Offloading:
+2025-01-30 07:44:56,059 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:44:56,059 - INFO     - offloading_algo.py:evaluation:32         - DS:           44288.0
+2025-01-30 07:44:56,059 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.164285
+2025-01-30 07:44:56,059 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.5240670000000001
+2025-01-30 07:44:56,059 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:44:56,059 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  44288.688352
+2025-01-30 07:44:56,059 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:44:56,059 - INFO     - offloading_algo.py:evaluation:32         - DS:           7424.0
+2025-01-30 07:44:56,060 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.338912
+2025-01-30 07:44:56,060 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.34944
+2025-01-30 07:44:56,060 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:44:56,060 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  7424.688352
+2025-01-30 07:44:56,060 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:44:56,060 - INFO     - offloading_algo.py:evaluation:32         - DS:           4400.0
+2025-01-30 07:44:56,060 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.512431
+2025-01-30 07:44:56,060 - INFO     - offloading_algo.py:evaluation:34         - CE:           0.175921
+2025-01-30 07:44:56,060 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:44:56,060 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  4400.688352
+2025-01-30 07:44:56,060 - INFO     - offloading_algo.py:device_only_evaluation:87 - Performing Device Only Offloading:
+2025-01-30 07:44:56,060 - INFO     - offloading_algo.py:evaluation:31         - Performing Evaluation:
+2025-01-30 07:44:56,060 - INFO     - offloading_algo.py:evaluation:32         - DS:           2304.0
+2025-01-30 07:44:56,060 - INFO     - offloading_algo.py:evaluation:33         - IC:           0.688352
+2025-01-30 07:44:56,060 - INFO     - offloading_algo.py:evaluation:34         - CE:           0
+2025-01-30 07:44:56,060 - INFO     - offloading_algo.py:evaluation:35         - AvgSpeed:     0.0
+2025-01-30 07:44:56,060 - INFO     - offloading_algo.py:evaluation:39         - Evaluation =  2304.688352
+2025-01-30 07:44:56,061 - INFO     - offloading_algo.py:static_offloading:116 - Computation Completed - Offloading Summary:
+2025-01-30 07:44:56,061 - INFO     - offloading_algo.py:static_offloading:117 - Lowest Evaluation: 2304.688352
+2025-01-30 07:44:56,061 - INFO     - offloading_algo.py:static_offloading:118 - Best Offloading Layer: 3
+2025-01-30 07:44:56,061 - INFO     - offloading_algo.py:static_offloading:119 - Ended Offloading Process
