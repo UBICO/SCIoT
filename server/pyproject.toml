@@ -1,6 +1,5 @@
 [project]
-name = "sciot"
-description = "Split computing on IoT"
+name = "SCIoT"
 dynamic = ["version"]  # This relies on git tags for versioning
 authors = [
     { name = "Fabio Bove", email = "fabio.bove.dr@gmail.com" },
