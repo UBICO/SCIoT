@@ -1,0 +1,158 @@
+import json
+import time
+from functools import wraps
+
+import tensorflow as tf
+
+from server.commons import OffloadingDataFiles
+from server.logger.log import logger
+from server.models.model_manager_config import ModelManagerConfig
+
+
+def track_inference_time(func):
+    """
+    This decorator is used to track the execution time of a function.
+    :param func: the function to be decorated
+    :return: the decorated function
+    """
+
+    @wraps(func)
+    def wrapper(self, layer_id: int, layer_offset: int, *args, **kwargs) -> object:
+        # Start the timer
+        start_time = time.perf_counter()
+        # Execute the original function (predict_single_layer)
+        result = func(self, layer_id, layer_offset, *args, **kwargs)
+        # Calculate the elapsed time
+        elapsed_time = time.perf_counter() - start_time
+        # Store the elapsed time in the inference_times dictionary
+        self.inference_times[layer_id - layer_offset] = elapsed_time
+        logger.debug(f"Edge Inference for layer [{layer_id - layer_offset}] took {elapsed_time:.4f} seconds")
+        return result
+
+    return wrapper
+
+
+class ModelManager:
+    """This class is used to manage the model and its layers.
+
+    Args:
+        save_path: The path to save the model.
+        model_path: The path to the model.
+
+    Attributes:
+        save_path: The path to save the model.
+        model_path: The path to the model.
+        num_layers: The number of layers in the model.
+        model: The model.
+        inference_times: A dictionary to store the inference times for each layer.
+    """
+
+    def __init__(self, save_path: str = ModelManagerConfig.SAVE_PATH, model_path: str = ModelManagerConfig.MODEL_PATH,
+                 inference_times: dict = {}):
+        self.save_path = save_path
+        self.model_path = model_path
+        self.num_layers = None
+        self.model = None
+        # dictionary to store inference times for each layer
+        self.inference_times = inference_times
+
+    def load_model(self, model_path: str = ModelManagerConfig.MODEL_PATH):
+        """Load the model from the given path.
+        Args:
+            model_path: The path to the model.
+        Returns:
+            None
+        """
+        logger.debug(f"Loading model from path: {model_path}")
+        try:
+            self.model_path = model_path
+            self.model = tf.keras.models.load_model(f'../models/test/{model_path}')
+            self.num_layers = len(self.model.layers)
+        except Exception as e:
+            print(f"Error loading model: {e}")
+            logger.error(f"Failed to load model: {e}")
+
+    def get_model_layer(self, layer_id: int) -> tf.keras.layers.Layer:
+        """Get the layer with the given id from the model.
+        Args:
+            layer_id: The id of the layer.
+        Returns:
+            The layer with the given id.
+        """
+        return self.model.layers[layer_id]
+
+    @staticmethod
+    def get_layer_size_in_bytes(layer: tf.keras.layers.Layer, layer_output: tf.Tensor) -> int:
+        """Calculate the size of a Keras layer's weights in bytes.
+        Args:
+            layer: A Keras layer.
+            layer_output: The output of the layer.
+        Returns:
+            The size of the layer in bytes.
+        """
+
+        """
+        total_size_in_bytes = 0
+        # Iterate through the weights of the layer
+        for weight in layer.weights:
+            # Get the shape of the weight tensor
+            weight_shape = weight.shape
+            # Get the dtype of the weights (as a string, like 'float32')
+            dtype = weight.dtype
+            # Use np.dtype directly since dtype is a string (e.g., 'float32')
+            size_per_element = np.dtype(dtype).itemsize
+            # Calculate the total number of elements
+            num_elements = np.prod(weight_shape)
+            # Total size in bytes for this weight
+            size_in_bytes = num_elements * size_per_element
+            total_size_in_bytes += size_in_bytes
+        """
+        # get the dtype of the output tensor
+        dtype = layer_output.dtype
+        # calculate the size in size_in_bytes and convert to Python scalar
+        size_in_bytes = tf.reduce_prod(layer_output.shape) * tf.constant(dtype.itemsize)
+        size_in_bytes = size_in_bytes.numpy()
+        return size_in_bytes
+
+    @track_inference_time
+    def predict_single_layer(self, layer_id: int, layer_offset: int, layer_input_data: object) -> object:
+        """Predict the output of a single layer.
+        Args:
+            layer_id: The id of the layer.
+            layer_input_data: The input data to the layer.
+        Returns:
+            The output of the layer.
+        """
+        logger.debug(f"Making a prediction for layer [{layer_id - layer_offset}]")
+
+        # initialize interepreter with layer tflite model
+        interpreter = tf.lite.Interpreter(
+            model_path=f'../models/test/test_model/layers/tflite/submodel_{layer_id - layer_offset}.tflite')
+        interpreter.allocate_tensors()
+        input_details = interpreter.get_input_details()
+        output_details = interpreter.get_output_details()
+
+        # set input tensor
+        for i, input_detail in enumerate(input_details):
+            interpreter.set_tensor(input_detail['index'], layer_input_data[i].reshape(input_detail['shape']))
+
+        # run inference
+        interpreter.invoke()
+
+        # return prediction
+        return interpreter.get_tensor(output_details[0]['index'])
+
+    def save_inference_times(self, save_path: str | None = None):
+        """Save the inference times to a JSON file.
+        Args:
+            save_path: The path to save the inference times.
+        Returns:
+            None
+        """
+        if save_path is not None:
+            self.save_path = save_path
+        self.save_path = self.save_path[:-1] if self.save_path[-1] == "/" else self.save_path
+        inference_times = self.inference_times
+        with open(f"{self.save_path}/{OffloadingDataFiles.data_file_path_edge}", "w") as f:
+            json.dump(inference_times, f, indent=4)
+        logger.debug(f"Inference times saved")
