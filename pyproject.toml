@@ -63,3 +63,6 @@ enabled = true
 [build-system]
 requires = ["setuptools>=61.0", "setuptools-git-versioning>=2.0,<3", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[tool.coverage.report]
+omit = ["*tests*", "commons.py", "*config.py", "!src/commons.py", "__init__.py"]
