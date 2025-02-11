@@ -1,0 +1,68 @@
+[project]
+name = "sciot"
+description = "Split computing on IoT"
+dynamic = ["version"]  # This relies on git tags for versioning
+authors = [
+    { name = "Fabio Bove", email = "fabio.bove.dr@gmail.com" },
+    { name = "Jun Wu Wang", email = "junwuwang@studenti.unimore.it" },
+    { name = "Luca Bedogni", email = "luca.bedogni@unimore.it" }
+]
+readme = "README.md"
+license = { file = "LICENSE" }
+keywords = ["flask-app", "esp32", "split-computing"]
+
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "fastapi>=0.115.7",
+    "ntplib>=0.4.0",
+    "numpy",
+    "paho-mqtt>=2.1.0",
+    "pyyaml>=6.0.2",
+    "tensorflow==2.15.0",
+    "ruff>=0.9.3",
+    "flask==3.0.3",
+    "flask-smorest==0.44.0",
+    "paho-mqtt==2.1.0",
+    "pandas~=2.2.2",
+    "tqdm~=4.66.4",
+    "scipy~=1.14.0",
+    "h5py==3.11.0",
+    "pillow",
+    "uvicorn",
+    "streamlit",
+    "streamlit_autorefresh",
+]
+
+# Define optional dependencies like testing and CUDA support
+[project.optional-dependencies]
+test = [
+    "pytest==7.2.1",
+    "pytest-cov==5.0.0",
+    "pytest-mock==3.14.0",
+    "pytest-md==0.2.0"
+]
+
+[tool.setuptools]
+py-modules = []
+
+
+[project.urls]
+Homepage = "https://github.com/UBICO/SCIoT"
+Issues = "https://github.com/UBICO/SCIoT/issues"
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "src"
+]
+
+
+# Setuptools git versioning configuration
+[tool.setuptools-git-versioning]
+enabled = true
+
+[build-system]
+requires = ["setuptools>=61.0", "setuptools-git-versioning>=2.0,<3", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.coverage.report]
+omit = ["*tests*", "commons.py", "*config.py", "!src/commons.py", "__init__.py"]

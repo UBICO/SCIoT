@@ -11,3 +11,6 @@ uv.lock
 
 # Virtual environments
 .venv
+
+# Logs
+logs
