@@ -13,7 +13,7 @@ class OffloadingDataFiles:
 
 
 class InputDataFiles:
-    test_data_file_path = "../models/test/test_model/pred_data/input_data.png"  # Path to test image
+    test_data_file_path = "src/server/models/test/test_model/pred_data/input_data.png"  # Path to test image
     input_data_file_path = "../input_data.png"  # Input image save path
 
 

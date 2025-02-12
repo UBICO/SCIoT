@@ -66,7 +66,7 @@ class ModelManager:
         logger.debug(f"Loading model from path: {model_path}")
         try:
             self.model_path = model_path
-            self.model = tf.keras.models.load_model(f'../models/test/{model_path}')
+            self.model = tf.keras.models.load_model(f'src/server/models/test/{model_path}')
             self.num_layers = len(self.model.layers)
         except Exception as e:
             print(f"Error loading model: {e}")
@@ -127,7 +127,7 @@ class ModelManager:
 
         # initialize interepreter with layer tflite model
         interpreter = tf.lite.Interpreter(
-            model_path=f'../models/test/test_model/layers/tflite/submodel_{layer_id - layer_offset}.tflite')
+            model_path=f'src/server/models/test/test_model/layers/tflite/submodel_{layer_id - layer_offset}.tflite')
         interpreter.allocate_tensors()
         input_details = interpreter.get_input_details()
         output_details = interpreter.get_output_details()
