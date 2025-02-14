@@ -5,8 +5,6 @@ The Split Computing on IoT (SCIoT) project provides tools to use Edge Impulse mo
 ![Unit Tests](https://github.com/UBICO/SCIoT/actions/workflows/codecov.yml/badge.svg)<br>
 [![Coverage](https://codecov.io/github/UBICO/SCIoT//coverage.svg?branch=main)](https://codecov.io/gh/UBICO/SCIoT)  
 [![Powered by UBICO](https://img.shields.io/badge/powered%20by-UBICO-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)]()  
-[![License](https://img.shields.io/github/license/UBICO/SCIoT.svg)](https://github.com/UBICO/SCIoT/blob/main/LICENSE)<br>
-
 
 ## Publications
 If you use this work, please consider citing our work:
