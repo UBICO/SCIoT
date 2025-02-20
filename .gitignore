@@ -5,6 +5,8 @@ build/
 dist/
 wheels/
 *.egg-info
+.idea
+coverage.xml
 
 # UV
 uv.lock
