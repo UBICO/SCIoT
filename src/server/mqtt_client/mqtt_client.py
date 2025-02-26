@@ -13,6 +13,7 @@ import threading
 import queue
 
 from server.commons import OffloadingDataFiles
+from server.commons import EvaluationFiles
 from server.commons import InputData
 from server.commons import InputDataFiles
 from server.logger.log import logger
@@ -143,7 +144,7 @@ class MqttClient:
                 message_content="InputImage",
                 timestamp=None,
             )
-            MqttMessageData.save_to_file(OffloadingDataFiles.evaluation_file_path, message_data.to_dict())
+            MqttMessageData.save_to_file(EvaluationFiles.evaluation_file_path, message_data.to_dict())
             logger.debug("Input image saved")
             return
 
@@ -162,7 +163,7 @@ class MqttClient:
         # Extend message data
         message_data = self.extend_message_data(message_data, received_timestamp, message.payload)
         # Save message data to file
-        MqttMessageData.save_to_file(OffloadingDataFiles.evaluation_file_path, message_data.to_dict())
+        MqttMessageData.save_to_file(EvaluationFiles.evaluation_file_path, message_data.to_dict())
 
         # run offloading algorithm and ask for prediction after the device sends the registration message
         if message_data.topic == Topics.registration.value:
@@ -195,7 +196,7 @@ class MqttClient:
             # finish inference
             prediction = Edge.run_inference(message_data.offloading_layer_index, np.array(message_data.layer_output, dtype=np.float32))
             logger.debug(f"Prediction: {prediction.tolist()}")
-            MqttMessageData.save_to_file(OffloadingDataFiles.web_file_path, message_data.to_dict())
+            MqttMessageData.save_to_file(EvaluationFiles.web_file_path, message_data.to_dict())
             # run offloading algorithm
             offloading_algo = OffloadingAlgo(
                 avg_speed=message_data.avg_speed,
