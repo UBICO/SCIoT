@@ -5,6 +5,7 @@ from functools import wraps
 import tensorflow as tf
 
 from server.commons import OffloadingDataFiles
+from server.commons import ModelFiles
 from server.logger.log import logger
 from server.models.model_manager_config import ModelManagerConfig
 
@@ -66,7 +67,7 @@ class ModelManager:
         logger.debug(f"Loading model from path: {model_path}")
         try:
             self.model_path = model_path
-            self.model = tf.keras.models.load_model(f'src/server/models/test/{model_path}')
+            self.model = tf.keras.models.load_model(f'{ModelFiles.model_save_path}/test/{model_path}')
             self.num_layers = len(self.model.layers)
         except Exception as e:
             print(f"Error loading model: {e}")
@@ -127,7 +128,7 @@ class ModelManager:
 
         # initialize interepreter with layer tflite model
         interpreter = tf.lite.Interpreter(
-            model_path=f'src/server/models/test/test_model/layers/tflite/submodel_{layer_id - layer_offset}.tflite')
+            model_path=f'{ModelFiles.model_save_path}/test/{ModelManagerConfig.MODEL_DIR_PATH}/layers/tflite/submodel_{layer_id - layer_offset}.tflite')
         interpreter.allocate_tensors()
         input_details = interpreter.get_input_details()
         output_details = interpreter.get_output_details()
@@ -153,6 +154,6 @@ class ModelManager:
             self.save_path = save_path
         self.save_path = self.save_path[:-1] if self.save_path[-1] == "/" else self.save_path
         inference_times = self.inference_times
-        with open(f"{self.save_path}/{OffloadingDataFiles.data_file_path_edge}", "w") as f:
+        with open(OffloadingDataFiles.data_file_path_edge, "w") as f:
             json.dump(inference_times, f, indent=4)
         logger.debug(f"Inference times saved")
