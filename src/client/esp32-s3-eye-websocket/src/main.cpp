@@ -52,10 +52,7 @@ struct SpiRamAllocator : ArduinoJson::Allocator {
 * ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 */
 // Communication & Offloading Variables
-websockets::WebsocketsClient registrationClient;
-websockets::WebsocketsClient deviceInputClient;
-websockets::WebsocketsClient deviceInferenceResultClient;
-websockets::WebsocketsClient offloadingLayerClient;
+websockets::WebsocketsClient websocketClient;
 // TimerHandle_t               websocketPollTimer;
 TimerHandle_t               wifiReconnectTimer;
 TimerHandle_t               deviceRegistrationTimer;
@@ -343,9 +340,7 @@ extern "C" void runNeuralNetworkLayer(int offloading_layer_index, float inputBuf
     offset += sizeof(inference_times);
 
     // Sends device prediction
-    Serial.println("Prediction sending...");
     postDeviceInferenceResult(output_message, offset);
-    Serial.println("Prediction sent");
   }
 }
 
@@ -406,143 +401,87 @@ void postRegistration(){
   String jsonMessage;
   serializeJson(jsonDoc, jsonMessage);
 
-  String url = "ws://" + String(WEBSOCKET_SRV) + ":" + String(WEBSOCKET_PORT) + "/ws/registration";
-  registrationClient.connect(url);
-  registrationClient.send(jsonMessage);
+  if (!websocketClient.available()) {
+    String url = "ws://" + String(WEBSOCKET_SRV) + ":" + String(WEBSOCKET_PORT) + "/ws";
+    websocketClient.connect(url);
+  }
+  Serial.println("Sending registration request...");
+  websocketClient.send(jsonMessage);
   Serial.println("Registration request sent");
 }
 
 void postDeviceInput(camera_fb_t *fb)
 {
-  String url = "ws://" + String(WEBSOCKET_SRV) + ":" + String(WEBSOCKET_PORT) + "/ws/device_input";
-  deviceInputClient.connect(url);
-  deviceInputClient.sendBinary((char*)fb->buf, fb->len);
-  deviceInputClient.close();
+  if (!websocketClient.available()) {
+    String url = "ws://" + String(WEBSOCKET_SRV) + ":" + String(WEBSOCKET_PORT) + "/ws";
+    websocketClient.connect(url);
+  }
+  Serial.println("Sending device input...");
+  websocketClient.sendBinary((char*)fb->buf, fb->len);
+  Serial.println("Device input sent");
 }
 
-// With chunking
 void postDeviceInferenceResult(char* output_message, int size)
 {
-  String url = "ws://" + String(WEBSOCKET_SRV) + ":" + String(WEBSOCKET_PORT) + "/ws/device_inference_result";
-  deviceInferenceResultClient.connect(url);
-  deviceInferenceResultClient.sendBinary(output_message, size);
-
-  // Chunking
-  // char* curr = output_message;
-  // int chunk_size = min(size, 10000);
-  // while (chunk_size > 0) {
-  //   deviceInferenceResultClient.sendBinary(curr, chunk_size);
-  //   curr += chunk_size;
-  //   size -= chunk_size;
-  //   chunk_size = min(size, 10000);
-  // }
-  deviceInferenceResultClient.close();
+  if (!websocketClient.available()) {
+    String url = "ws://" + String(WEBSOCKET_SRV) + ":" + String(WEBSOCKET_PORT) + "/ws";
+    websocketClient.connect(url);
+  }
+  Serial.println("Sending device inference result...");
+  websocketClient.sendBinary(output_message, size);
+  Serial.println("Device inference result sent");
 }
 
-// Without chunking
-// void postDeviceInferenceResult(char* output_message, int size)
-// {
-//   if (!deviceInferenceResultClient.available()) {
-//     String url = "ws://" + String(WEBSOCKET_SRV) + ":" + String(WEBSOCKET_PORT) + "/ws/device_inference_result";
-//     deviceInferenceResultClient.connect(url);
-//   }
-//   deviceInferenceResultClient.sendBinary(output_message, size);  // Send POST request with raw bytes body
-// }
-
-// Polling is necessary if closing the connection with device_inference_result endpoint is used to signal last chunk has been sent
-void getOffloadingLayer()
-{
-  Serial.println("OFFLOADING CONNECTING");
-  String url = "ws://" + String(WEBSOCKET_SRV) + ":" + String(WEBSOCKET_PORT) + "/ws/offloading_layer";
-  offloadingLayerClient.connect(url);
-  Serial.println("OFFLOADING CONNECTED");
-  offloadingLayerClient.send("offloading_layer");
-  Serial.println("OFFLOADING SENT");
-}
-
-void registrationOnEventsCallback(websockets::WebsocketsEvent event, String data) {
+void onEventsCallback(websockets::WebsocketsEvent event, String data) {
     if(event == websockets::WebsocketsEvent::ConnectionOpened) {
-        Serial.println("Registration connection opened");
+        Serial.println("Websocket connection opened");
     } else if(event == websockets::WebsocketsEvent::ConnectionClosed) {
-        Serial.println("Registration connection closed");
+        Serial.println("Websocket connection closed");
     } else if(event == websockets::WebsocketsEvent::GotPing) {
-        Serial.println("Registration client got a Ping!");
+        Serial.println("Got a Ping!");
     } else if(event == websockets::WebsocketsEvent::GotPong) {
-        Serial.println("Registration client got a Pong!");
+        Serial.println("Got a Pong!");
     }
 }
 
-void offloadingLayerOnEventsCallback(websockets::WebsocketsEvent event, String data) {
-    if(event == websockets::WebsocketsEvent::ConnectionOpened) {
-        Serial.println("Offloading layer connection opened");
-    } else if(event == websockets::WebsocketsEvent::ConnectionClosed) {
-        Serial.println("Offloading layer connection closed");
-    } else if(event == websockets::WebsocketsEvent::GotPing) {
-        Serial.println("Offloading layer client got a Ping!");
-    } else if(event == websockets::WebsocketsEvent::GotPong) {
-        Serial.println("Offloading layer client got a Pong!");
-    }
-}
-
-void registrationOnMessageCallback(websockets::WebsocketsMessage message) {
+void onMessageCallback(websockets::WebsocketsMessage message) {
+  Serial.println("Server response received");
   JsonDocument doc(&allocator);
   DeserializationError error = deserializeJson(doc, message.c_str());
   
   if (!error)
   {
-    deviceRegistered = true;
-    Serial.println("Registration successful!");
+    if (doc["channel"] == "registration") {
+      deviceRegistered = true;
+      Serial.println("Registration successful!");
+    } else if (doc["channel"] == "offloading_layer") {
+      xTimerReset(deviceRegistrationTimer, 0);
+      int tmp = doc["offloading_layer_index"].as<int>();
+
+      if (tmp < 0 || tmp >= MAX_NUM_LAYER) {
+        Serial.println("Invalid offloading layer");
+        return;
+      }
+      best_offloading_layer_index = tmp;
+
+      Serial.print("Best Offloading Layer Index: ");
+      Serial.println(best_offloading_layer_index);
+    }
   }
   else
   {
     Serial.print("JSON Parsing Failed: ");
     Serial.println(error.c_str());
   }
-  registrationClient.close();
-}
-
-void offloadingLayerOnMessageCallback(websockets::WebsocketsMessage message) {
-  Serial.println("OFFLOADING 1");
-  JsonDocument doc(&allocator);
-  DeserializationError error = deserializeJson(doc, message.c_str());
-  
-  if (!error)
-  {
-    Serial.println("OFFLOADING 2");
-    xTimerReset(deviceRegistrationTimer, 0);
-    Serial.println(doc["offloading_layer_index"].as<int>());
-
-    if (doc["offloading_layer_index"] >= MAX_NUM_LAYER) {
-      Serial.println("Invalid offloading layer");
-      return;
-    }
-    // Extract "offloading_layer" value
-    best_offloading_layer_index = doc["offloading_layer_index"].as<int>();
-    Serial.println("OFFLOADING 3");
-
-    Serial.print("Best Offloading Layer Index: ");
-    Serial.println(best_offloading_layer_index);
-  }
-  else
-  {
-    Serial.println("OFFLOADING 4");
-    Serial.print("JSON Parsing Failed: ");
-    Serial.println(error.c_str());
-  }
-  offloadingLayerClient.close();
 }
 
 void websocketConfiguration() {
-  registrationClient.onMessage(registrationOnMessageCallback);
-  registrationClient.onEvent(registrationOnEventsCallback);
-
-  offloadingLayerClient.onMessage(offloadingLayerOnMessageCallback);
-  offloadingLayerClient.onEvent(offloadingLayerOnEventsCallback);
+  websocketClient.onMessage(onMessageCallback);
+  websocketClient.onEvent(onEventsCallback);
 }
 
 // void websocketPoll() {
-//   registrationClient.poll();
-//   offloadingLayerClient.poll();
+//   websocketClient.poll();
 // }
 
 /* 
@@ -630,7 +569,6 @@ void setup() {
   esp_task_wdt_init(WDT_TIMEOUT, true); // Watchdog Timer
 
   if (psramInit()) {
-    // heap_caps_malloc_extmem_enable(128);  // Prefer PSRAM for >128B allocs
     Serial.println("The PSRAM is correctly initialized");
   } else {
     Serial.println("PSRAM does not work");
@@ -660,9 +598,7 @@ void setup() {
  * ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  */
 void loop() {
-  if (!deviceRegistered) {
-    registrationClient.poll();
-  }
+  websocketClient.poll();
   // Capture a frame
   camera_fb_t *fb = esp_camera_fb_get();
   if (!fb) {
@@ -671,23 +607,26 @@ void loop() {
   }
   Serial.printf("Captured image with size: %u bytes\n", fb->len);
 
+  websocketClient.poll();
   // Send captured image
   if (deviceRegistered) {
-    getOffloadingLayer();
+    // getOffloadingLayer();
     postDeviceInput(fb);
     Serial.println("Captured image sent");
   }
 
+  websocketClient.poll();
   // Parse input for model
   getModelDataForPrediction(fb);
 
+  websocketClient.poll();
   // Run inference and send results
   if (modelDataLoaded) {
-    offloadingLayerClient.poll();
     runNeuralNetworkLayer(best_offloading_layer_index, inputBuffer);
     modelDataLoaded = false;
   }
 
+  websocketClient.poll();
   // Free the frame buffer
   esp_camera_fb_return(fb);
 }

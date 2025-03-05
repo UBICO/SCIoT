@@ -4,6 +4,8 @@ from server.communication.request_handler import RequestHandler
 import ntplib
 import threading
 import time
+import json
+from server.logger.log import logger
 
 
 class WebsocketServer:
@@ -11,7 +13,7 @@ class WebsocketServer:
         self,
         host: str,
         port: int,
-        endpoints: dict,
+        endpoint: str,
         ntp_server: str,
         last_offloading_layer: int,
         request_handler: RequestHandler
@@ -19,7 +21,7 @@ class WebsocketServer:
         self.app = FastAPI()
         self.host = host
         self.port = port
-        self.endpoints = endpoints
+        self.endpoint = endpoint
 
         self.request_handler = request_handler
         self.best_offloading_layer = last_offloading_layer
@@ -47,70 +49,42 @@ class WebsocketServer:
         return time.time() + self.offset
 
     def _setup_routes(self):
-        @self.app.websocket(self.endpoints['registration'])
-        async def registration(websocket: WebSocket):
+        @self.app.websocket(self.endpoint)
+        async def websocket_endpoint(websocket: WebSocket):
             await websocket.accept()
-            try:
-                while True:
-                    json_data = await websocket.receive_json()
-                    cleaned_device_id = self.request_handler.handle_registration(json_data["device_id"])
-                    response = {'device': cleaned_device_id}
-                    await websocket.send_json(response)
-            except WebSocketDisconnect:
-                pass
+            logger.info('WebSocket connection established')
 
-        @self.app.websocket(self.endpoints['device_input'])
-        async def device_input(websocket: WebSocket):
-            await websocket.accept()
             try:
                 while True:
-                    byte_data = await websocket.receive_bytes()
-                    self.request_handler.handle_device_input(byte_data)
-            except WebSocketDisconnect:
-                pass
-            
-        # With chunking
-        @self.app.websocket(self.endpoints['device_inference_result'])
-        async def device_inference_result(websocket: WebSocket):
-            await websocket.accept()
-            bytes_concat = bytearray()
-            try:
-                while True:
-                    byte_data = await websocket.receive_bytes()
-                    bytes_concat.extend(byte_data)
-            except WebSocketDisconnect:
-                received_timestamp = self._get_current_time()
-                self.best_offloading_layer = self.request_handler.handle_device_inference_result(body=bytes(bytes_concat), received_timestamp=received_timestamp)
+                    message = await websocket.receive()  # Receives both text and binary
+                    received_timestamp = self._get_current_time()
 
-        # Polling is necessary if closing the connection with device_inference_result endpoint is used to signal last chunk has been sent
-        @self.app.websocket(self.endpoints['offloading_layer'])
-        async def offloading_layer(websocket: WebSocket):
-            await websocket.accept()
-            try:
-                while True:
-                    str_data = await websocket.receive_text()
-                    cleaned_offloading_layer_index = self.request_handler.handle_offloading_layer(best_offloading_layer=self.best_offloading_layer)
-                    response = {'offloading_layer_index': cleaned_offloading_layer_index}
-                    await websocket.send_json(response)
-            except WebSocketDisconnect:
-                pass
+                    if 'text' in message:  # JSON/Text message
+                        try:
+                            json_data = json.loads(message['text'])  # Parse JSON
+                            logger.debug('Registration request received')
+                            cleaned_device_id = self.request_handler.handle_registration(json_data["device_id"])
+                            response = {'channel': 'registration', 'device': cleaned_device_id}
+                            await websocket.send_json(response)
+                            logger.debug('Registration response sent')
+                        except json.JSONDecodeError:
+                            logger.debug('Error: Received non-JSON text data')
 
-        # Without chunking
-        # @self.app.websocket(self.endpoints['device_inference_result'])
-        # async def device_inference_result(websocket: WebSocket):
-        #     await websocket.accept()
-        #     try:
-        #         while True:
-        #             byte_data = await websocket.receive_bytes()
-        #             received_timestamp = self._get_current_time()
-        #             self.best_offloading_layer = self.request_handler.handle_device_inference_result(body=byte_data, received_timestamp=received_timestamp)
-        #             # print(len(byte_data))
-        #             # print(self.best_offloading_layer)
-        #             cleaned_offloading_layer_index = self.request_handler.handle_offloading_layer(best_offloading_layer=self.best_offloading_layer)
-        #             response = {'offloading_layer_index': cleaned_offloading_layer_index}
-        #             await websocket.send_json(response)
-        #     except WebSocketDisconnect as e:
-        #         pass
+                    elif 'bytes' in message:  # Binary message
+                        binary_data = message['bytes']
+                        if len(binary_data) == 18432:
+                            logger.debug('Device input received')
+                            self.request_handler.handle_device_input(binary_data)
+                            logger.debug('Device input saved')
+                        else:
+                            logger.debug('Device inference result received')
+                            self.best_offloading_layer = self.request_handler.handle_device_inference_result(body=binary_data, received_timestamp=received_timestamp)
+                            cleaned_offloading_layer_index = self.request_handler.handle_offloading_layer(best_offloading_layer=self.best_offloading_layer)
+                            response = {'channel': 'offloading_layer', 'offloading_layer_index': cleaned_offloading_layer_index}
+                            await websocket.send_json(response)
+                            logger.debug('Best offloading layer sent')
+            except WebSocketDisconnect:
+                logger.info('WebSocket connection closed')
 
     def run(self):
         import uvicorn

@@ -24,7 +24,7 @@ if __name__ == "__main__":
         websocket_server = WebsocketServer(
             host=websocket_config['host'],
             port=websocket_config['port'],
-            endpoints=websocket_config['endpoints'],
+            endpoint=websocket_config['endpoint'],
             ntp_server=websocket_config['ntp_server'],
             last_offloading_layer=websocket_config['last_offloading_layer'],
             request_handler=RequestHandler()

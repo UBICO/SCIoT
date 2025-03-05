@@ -6,11 +6,7 @@ communication:
   websocket:
     host: "0.0.0.0"
     port: 8080
-    endpoints:
-      registration: "/ws/registration"
-      device_input: "/ws/device_input"
-      device_inference_result: "/ws/device_inference_result"
-      offloading_layer: "/ws/offloading_layer"
+    endpoint: "/ws"
     ntp_server: "0.it.pool.ntp.org"
     last_offloading_layer: 58
   http:
