@@ -3,7 +3,8 @@ import streamlit as st
 from streamlit_autorefresh import st_autorefresh
 import pandas as pd
 
-from src.commons import OffloadingDataFiles
+from server.commons import OffloadingDataFiles
+from server.commons import EvaluationFiles
 
 
 st.set_page_config(layout="wide")
@@ -15,7 +16,7 @@ st.title("Split computing")
 usecols = ["received_timestamp", "payload_size", "latency", "avg_speed", "offloading_layer_index"]
 
 # Read data with subset of columns
-df = pd.read_csv("../evaluations/web.csv", usecols=usecols)
+df = pd.read_csv(EvaluationFiles.evaluation_file_path, usecols=usecols)
 
 df_tail = df.tail(10)
 df_last_row = df_tail.tail(1)

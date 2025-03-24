@@ -19,6 +19,10 @@ class EvaluationFiles:
     web_file_path: str = str(BASE_DIR / "evaluations/web.csv")
 
 
+class ConfigurationFiles:
+    server_configuration_file_path = str = str(BASE_DIR / "settings.yaml")
+
+
 class ModelFiles:
     model_save_path: str = str(BASE_DIR / "models")
 
