@@ -23,7 +23,6 @@ class RequestHandler():
         image_array = InputData.make_array(rgb565_image=rgb565_image)
         image = Image.fromarray(image_array, 'RGB')
         image.save(InputDataFiles.input_data_file_path)
-        logger.debug("Input image saved")
         return
     
     def handle_device_inference_result(self, body, received_timestamp):

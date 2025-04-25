@@ -1,11 +1,11 @@
 from server.edge.edge_initialization import Edge
 from server.logger.log import logger
-from server.mqtt_client.mqtt_client import MqttClient
-from server.mqtt_client.mqtt_configs import MqttClientConfig
 
 import yaml
 from server.communication.websocket_server import WebsocketServer
 from server.communication.http_server import HttpServer
+from server.communication.mqtt_client import MqttClient
+from paho.mqtt import client as mqtt
 from server.communication.request_handler import RequestHandler
 
 from server.commons import ConfigurationFiles
@@ -44,11 +44,15 @@ if __name__ == "__main__":
         http_server.run()
 
     if 'mqtt' in config['communication']['mode']:
+        mqtt_config = config['communication']['mqtt']
         mqtt_client = MqttClient(
-            broker_url=MqttClientConfig.broker_url,
-            broker_port=MqttClientConfig.broker_port,
-            client_id=MqttClientConfig.client_id,
-            protocol=MqttClientConfig.protocol,
-            subscribed_topics=MqttClientConfig.subscribe_topics
+            broker_url=mqtt_config['broker_url'],
+            broker_port=mqtt_config['broker_port'],
+            client_id=mqtt_config['client_id'],
+            protocol=mqtt.MQTTv311,
+            subscribed_topics=mqtt_config['topics'],
+            ntp_server=http_config['ntp_server'],
+            last_offloading_layer=mqtt_config['last_offloading_layer'],
+            request_handler=RequestHandler()
         )
         mqtt_client.run()

@@ -20,6 +20,13 @@ communication:
     ntp_server: "0.it.pool.ntp.org"
     last_offloading_layer: 58
   mqtt:
-    broker: "hostname.local"
-    port: 1883
-
+    broker_url: "hostname.local"
+    broker_port: 1883
+    client_id: "edge"
+    topics:
+      registration: "devices/"
+      offloading_layer: "device_01/offloading_layer"
+      device_input: "device_01/input_data"
+      device_inference_result: "device_01/model_inference_result"
+    ntp_server: "0.it.pool.ntp.org"
+    last_offloading_layer: 58
