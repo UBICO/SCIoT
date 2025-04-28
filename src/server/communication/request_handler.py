@@ -1,16 +1,19 @@
 import json
-
 import numpy as np
+from PIL import Image
+
 from server.edge.edge_initialization import Edge
 from server.offloading_algo.offloading_algo import OffloadingAlgo
-from PIL import Image
 
 from server.commons import OffloadingDataFiles
 from server.commons import EvaluationFiles
-from server.commons import InputData
 from server.commons import InputDataFiles
+
 from server.logger.log import logger
+
 from server.communication.message_data import MessageData
+
+from server.models.model_input_converter import ModelInputConverter
 
 import struct
 
@@ -19,8 +22,8 @@ class RequestHandler():
     def handle_registration(self, device_id):
         return device_id
 
-    def handle_device_input(self, rgb565_image):
-        image_array = InputData.make_array(rgb565_image=rgb565_image)
+    def handle_device_input(self, rgb565_image, height, width):
+        image_array = ModelInputConverter.convert_rgb565_to_nparray(rgb565_image, height, width)
         image = Image.fromarray(image_array, 'RGB')
         image.save(InputDataFiles.input_data_file_path)
         return

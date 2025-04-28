@@ -11,6 +11,8 @@ class HttpServer:
         port: int,
         endpoints: dict,
         ntp_server: str,
+        input_height: int,
+        input_width: int,
         last_offloading_layer: int,
         request_handler: RequestHandler
     ):
@@ -18,10 +20,16 @@ class HttpServer:
         self.host = host
         self.port = port
         self.endpoints = endpoints
-        
-        self.request_handler = request_handler
-        self.best_offloading_layer = last_offloading_layer
+
         self.devices = set()
+
+        # Set up model
+        self.input_height = input_height
+        self.input_width = input_width
+        self.best_offloading_layer = last_offloading_layer
+
+        # Set up request handler
+        self.request_handler = request_handler
 
         # Set up NTP client
         self.ntp_client = ntplib.NTPClient()
@@ -59,7 +67,7 @@ class HttpServer:
         async def device_input(request: Request):
             try:
                 body = await request.body()  # Reads raw bytes
-                self.request_handler.handle_device_input(body)
+                self.request_handler.handle_device_input(body, self.input_height, self.input_width)
                 return {'message': 'Success'}
             except Exception as e:
                 raise HTTPException(status_code=404, detail=str(e))

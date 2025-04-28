@@ -20,6 +20,8 @@ class MqttClient:
             protocol: str,
             subscribed_topics: list,
             ntp_server: str,
+            input_height: int,
+            input_width: int,
             last_offloading_layer: int,
             request_handler: RequestHandler
     ):
@@ -43,8 +45,13 @@ class MqttClient:
         self.offset = self.sync_with_ntp()
         self.start_timestamp = self.get_current_time()
 
-        self.request_handler = request_handler
+        # Set up model
+        self.input_height = input_height
+        self.input_width = input_width
         self.best_offloading_layer = last_offloading_layer
+
+        # Set up request handler
+        self.request_handler = request_handler
 
         # Set up helper thread
         self.task_queue = queue.Queue()
@@ -129,7 +136,7 @@ class MqttClient:
             logger.debug('Best offloading layer sent')
         elif message.topic == self.subscribed_topics['device_input']: # Save input image
             logger.debug('Device input received')
-            self.request_handler.handle_device_input(message.payload)
+            self.request_handler.handle_device_input(message.payload, self.input_height, self.input_width)
             logger.debug('Device input saved')
         elif message.topic == self.subscribed_topics['registration']: # Sends best offloading layer
             logger.debug('Registration request received')
