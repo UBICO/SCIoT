@@ -3,9 +3,10 @@ import json
 import numpy as np
 import tensorflow as tf
 
-from server.commons import InputData
 from server.commons import OffloadingDataFiles
+from server.commons import InputDataFiles
 from server.models.model_manager import ModelManager
+from server.models.model_input_converter import ModelInputConverter
 
 
 class Edge:
@@ -68,9 +69,9 @@ class Edge:
         return predictions[layers_to_use[num_of_layers - start_layer_index - 1]]
 
     @staticmethod
-    def initialization():
+    def initialization(input_height, input_width):
         # original array
-        image_array = InputData().image_array
+        image_array = ModelInputConverter.convert_png_to_nparray(InputDataFiles.test_data_file_path, input_height, input_width)
         image_array = image_array / 255.0  # Normalize pixel values
 
         # check the shape and dtype

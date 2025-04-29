@@ -8,7 +8,7 @@ communication:
     port: 8080
     endpoint: "/ws"
     ntp_server: "0.it.pool.ntp.org"
-    last_offloading_layer: 58
+    model: "fomo_96x96"
   http:
     host: "0.0.0.0"
     port: 8000
@@ -18,8 +18,21 @@ communication:
       device_inference_result: "/api/device_inference_result" # post
       offloading_layer: "/api/offloading_layer" # get
     ntp_server: "0.it.pool.ntp.org"
-    last_offloading_layer: 58
+    model: "fomo_96x96"
   mqtt:
-    broker: "hostname.local"
-    port: 1883
+    broker_url: "hostname.local"
+    broker_port: 1883
+    client_id: "edge"
+    topics:
+      registration: "devices/"
+      offloading_layer: "device_01/offloading_layer"
+      device_input: "device_01/input_data"
+      device_inference_result: "device_01/model_inference_result"
+    ntp_server: "0.it.pool.ntp.org"
+    model: "fomo_96x96"
 
+model:
+  fomo_96x96:
+    input_height: 96
+    input_width: 96
+    last_offloading_layer: 58

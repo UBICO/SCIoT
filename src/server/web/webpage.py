@@ -31,7 +31,7 @@ df_offloading_layer = df_tail.get(['received_timestamp', 'offloading_layer_index
 
 quadcol = st.columns(4)
 
-quadcol[0].metric(label="Best offloading layer", value = df_last_row['offloading_layer_index'])
+quadcol[0].metric(label="Best offloading layer", value = f"{int(df_last_row['offloading_layer_index'].iloc[0]):,}")
 quadcol[1].metric(label="Layer size", value = f"{int(df_last_row['payload_size'].iloc[0]):,} Bytes")
 quadcol[2].metric(label="Latency", value = f"{float(df_last_row['latency'].iloc[0]):,.4f} s")
 quadcol[3].metric(label="Network speed", value = f"{float(df_last_row['avg_speed'].iloc[0]):,.2f} Bytes/s")

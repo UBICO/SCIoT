@@ -15,6 +15,8 @@ class WebsocketServer:
         port: int,
         endpoint: str,
         ntp_server: str,
+        input_height: int,
+        input_width: int,
         last_offloading_layer: int,
         request_handler: RequestHandler
     ):
@@ -23,8 +25,13 @@ class WebsocketServer:
         self.port = port
         self.endpoint = endpoint
 
-        self.request_handler = request_handler
+        # Set up model
+        self.input_height = input_height
+        self.input_width = input_width
         self.best_offloading_layer = last_offloading_layer
+
+        # Set up request handler
+        self.request_handler = request_handler
 
         # Set up NTP client
         self.ntp_client = ntplib.NTPClient()
@@ -74,7 +81,7 @@ class WebsocketServer:
                         binary_data = message['bytes']
                         if len(binary_data) == 18432:
                             logger.debug('Device input received')
-                            self.request_handler.handle_device_input(binary_data)
+                            self.request_handler.handle_device_input(binary_data, self.input_height, self.input_width)
                             logger.debug('Device input saved')
                         else:
                             logger.debug('Device inference result received')
