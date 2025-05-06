@@ -51,11 +51,13 @@ py-modules = []
 Homepage = "https://github.com/UBICO/SCIoT"
 Issues = "https://github.com/UBICO/SCIoT/issues"
 
+[tool.setuptools.packages.find]
+where = ["src"]
+
 [tool.pytest.ini_options]
 pythonpath = [
   "src"
 ]
-
 
 # Setuptools git versioning configuration
 [tool.setuptools-git-versioning]
