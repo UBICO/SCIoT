@@ -9,76 +9,55 @@ If you use this work, please consider citing our work:
 - F. Bove and L. Bedogni, "Smart Split: Leveraging TinyML and Split Computing for Efficient Edge AI," 2024 IEEE/ACM Symposium on Edge Computing (SEC), Rome, Italy, 2024, pp. 456-460, [DOI Link](http://dx.doi.org/10.1109/SEC62691.2024.00052).
 
 ## Configuration
-Clone and go in the repository:
+Clone the repository and navigate into it:
 
 ```sh
 git clone https://github.com/UBICO/SCIoT.git
+cd SCIoT
 ```
 
-Install python 3.11:
+Create the virtual environment and install the dependencies:
 
 ```sh
-pyenv install 3.11
-```
-
-- Newer versions of python don't support the tensorflow version used in the project
-
-Switch to python 3.11:
-
-```sh
-pyenv global 3.11
-```
-
-- You can switch back after the configuration process by running `pyenv system global`
-
-Create a virtual environment:
-
-```sh
-python3 -m venv venv
+uv sync
 ```
 
 Activate the virtual environment:
 
 ```sh
-source venv/bin/activate
+source .venv/bin/activate
 ```
 
-Install the project's dependencies:
-
-```sh
-pip3 install .
-```
-
-Configure the absolute path to the project's `src` directory (e.g. `/home/username/Documents/SCIoT/src/`):
-
-```sh
-cd $(python3 -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())")
-echo /absolute/path/to/project/src/ > project.pth
-```
 ### Model setup
 - Save your keras model as `test_model.h5` in `src/server/models/test/test_model/`
 - Save your test image as `test_image.png` in `src/server/models/test/test_model/pred_data/`
-- Split the model by running `python3 model_split.py` in `src/server/models/`
+- Split the model by running `python3 model_split.py` from `src/server/models/`
 - Configure the paths as needed using `src/server/commons.py`
 
 ### Server setup
 - Configure the server using `src/server/settings.yaml`
 
 ## Usage
-In root directory, run the MQTT broker:
+From the repository's root directory, activate the virtual environment:
+
+```sh
+source .venv/bin/activate
+```
+
+Start the MQTT broker:
 
 ```sh
 docker compose up
 ```
 
-In `src/server/edge`, run the edge server:
+Run the edge server:
 
 ```sh
-python3 run_edge.py
+python3 src/server/edge/run_edge.py
 ```
 
-In `src/server/web`, run the webpage:
+Run the analytics dashboard:
 
 ```sh
-streamlit run webpage.py
+streamlit run src/server/web/webpage.py
 ```
