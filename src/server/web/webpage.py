@@ -5,6 +5,7 @@ import pandas as pd
 
 from server.commons import OffloadingDataFiles
 from server.commons import EvaluationFiles
+from server.commons import InputDataFiles
 
 
 st.set_page_config(layout="wide")
@@ -79,4 +80,4 @@ doublecol[1].header('Best offloading layer')
 doublecol[1].line_chart(df_offloading_layer, y='Best offloading layer', x='Timestamp (s)')
 
 st.header('Captured image')
-st.image('../input_data.png')
+st.image(InputDataFiles.input_data_file_path)
