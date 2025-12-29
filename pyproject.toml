@@ -32,6 +32,7 @@ dependencies = [
     "streamlit",
     "streamlit_autorefresh",
     "websockets",
+    "watchdog>=6.0.0",
 ]
 
 # Define optional dependencies like testing and CUDA support

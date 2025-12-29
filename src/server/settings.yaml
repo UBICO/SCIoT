@@ -20,7 +20,7 @@ communication:
     ntp_server: "0.it.pool.ntp.org"
     model: "fomo_96x96"
   mqtt:
-    broker_url: "hostname.local"
+    broker_url: "localhost"
     broker_port: 1883
     client_id: "edge"
     topics:
